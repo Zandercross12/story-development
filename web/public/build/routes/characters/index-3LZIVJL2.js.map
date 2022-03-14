@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\characters\\index.jsx?browser", "../../../../app/routes/characters/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\characters\\\\index.jsx\";", "export default function Characters() {\r\n  return (\r\n    <section id=\"characters\">\r\n      <div className=\"container\"></div>\r\n    </section>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,sBAAsB;AACnC,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA;AAAA;",
+  "names": []
+}

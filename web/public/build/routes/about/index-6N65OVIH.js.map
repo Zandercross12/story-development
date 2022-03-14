@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\about\\index.jsx?browser", "../../../../app/routes/about/index.jsx"],
+  "sourcesContent": ["export * from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\about\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const About = () => {\r\n  return <div>About</div>;\r\n};\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,QAAQ,MAAM;AACzB,SAAO,mDAAC,OAAD,MAAK;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\root.jsx?browser", "../../app/root.jsx"],
+  "sourcesContent": ["export { default, meta } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\root.jsx\";", "import {\n  Links,\n  LiveReload,\n  Meta,\n  Outlet,\n  Scripts,\n  ScrollRestoration,\n} from \"remix\";\n// components\nimport { Navbar } from \"~/components/Navbar/Navbar\";\n\nexport function meta() {\n  return { title: \"Home\" };\n}\n\nexport default function App() {\n  return (\n    <html lang=\"en\">\n      <head>\n        <meta charSet=\"utf-8\" />\n        <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n        <script\n          src=\"https://kit.fontawesome.com/e4319753b5.js\"\n          crossorigin=\"anonymous\"\n        ></script>\n        <Meta />\n        <Links />\n      </head>\n\n      <body>\n        <Outlet />\n        <ScrollRestoration />\n        <Scripts />\n        <LiveReload />\n      </body>\n    </html>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;;;ACAA;AAWO,gBAAgB;AACrB,SAAO,EAAE,OAAO;AAAA;AAGH,eAAe;AAC5B,SACE,oCAAC,QAAD;AAAA,IAAM,MAAK;AAAA,KACT,oCAAC,QAAD,MACE,oCAAC,QAAD;AAAA,IAAM,SAAQ;AAAA,MACd,oCAAC,QAAD;AAAA,IAAM,MAAK;AAAA,IAAW,SAAQ;AAAA,MAC9B,oCAAC,UAAD;AAAA,IACE,KAAI;AAAA,IACJ,aAAY;AAAA,MAEd,oCAAC,MAAD,OACA,oCAAC,OAAD,QAGF,oCAAC,QAAD,MACE,oCAAC,QAAD,OACA,oCAAC,mBAAD,OACA,oCAAC,SAAD,OACA,oCAAC,YAAD;AAAA;",
+  "names": []
+}

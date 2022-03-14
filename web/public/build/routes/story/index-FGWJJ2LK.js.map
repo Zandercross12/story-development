@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\story\\index.jsx?browser", "../../../../app/routes/story/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\story\\\\index.jsx\";", "export const Story = () => {\r\n  return (\r\n    <section id=\"story\">\r\n      <div className=\"container\">\r\n        <h1>Story</h1>\r\n        <p>\r\n          Welcome to the Story page, this page will contain brief summaries\r\n          about each event that happens on the timeline.\r\n        </p>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default Story;\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAO,IAAM,QAAQ,MAAM;AACzB,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,MAAI,UACJ,oCAAC,KAAD,MAAG;AAAA;AASX,IAAO,gBAAQ;",
+  "names": []
+}

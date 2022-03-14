@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx", "../../../app/components/Navbar/Navbar.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\index.jsx\";", "// components\nimport { Navbar } from \"~/components/Navbar/Navbar\";\n\nexport default function Index() {\n  return <Navbar />;\n}\n", "export const Navbar = () => {\r\n  return (\r\n    <head>\r\n      <nav>\r\n        <ul>\r\n          <li>Home</li>\r\n          <li>About</li>\r\n          <li>Contact</li>\r\n        </ul>\r\n      </nav>\r\n    </head>\r\n  );\r\n};\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;;;ACAA;AAAO,IAAM,SAAS,MAAM;AAC1B,SACE,oCAAC,QAAD,MACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MACE,oCAAC,MAAD,MAAI,SACJ,oCAAC,MAAD,MAAI,UACJ,oCAAC,MAAD,MAAI;AAAA;;;ADJC,iBAAiB;AAC9B,SAAO,oCAAC,QAAD;AAAA;",
+  "names": []
+}

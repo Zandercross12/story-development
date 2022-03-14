@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx", "../../../app/components/Navbar/Navbar.jsx"],
+  "sourcesContent": ["export { default, links } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\index.jsx\";", "// components\nimport { Navbar } from \"~/components/Navbar/Navbar\";\n// styles\nimport styles from \"~/styles/main.css\";\n\nexport function links() {\n  return [\n    {\n      rel: \"stylesheet\",\n      href: styles,\n    },\n  ];\n}\n\nexport default function Index() {\n  return <Navbar />;\n}\n", "export const Navbar = () => {\r\n  return (\r\n    <header>\r\n      <nav>\r\n        <ul>\r\n          <li>Home</li>\r\n          <li>About</li>\r\n          <li>Contact</li>\r\n        </ul>\r\n      </nav>\r\n    </header>\r\n  );\r\n};\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;;;ACAA;AAAO,IAAM,SAAS,MAAM;AAC1B,SACE,oCAAC,UAAD,MACE,oCAAC,OAAD,MACE,oCAAC,MAAD,MACE,oCAAC,MAAD,MAAI,SACJ,oCAAC,MAAD,MAAI,UACJ,oCAAC,MAAD,MAAI;AAAA;;;;;;ADFP,iBAAiB;AACtB,SAAO;AAAA,IACL;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA;AAAA;AAAA;AAKG,iBAAiB;AAC9B,SAAO,oCAAC,QAAD;AAAA;",
+  "names": []
+}

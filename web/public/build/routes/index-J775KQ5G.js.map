@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\index.jsx\";", "// react | remix\nimport { useLoaderData } from \"remix\";\n// components\nimport { Home } from \"./home\";\n// sanity client\nimport client from \"~/lib/sanity/client\";\n// third-party\nimport groq from \"groq\";\n\nexport const loader = async () => {\n  const page = await client.fetch(groq`*[_type == \"pages\" && name == \"Home\"]`);\n\n  return page;\n};\n\nexport default function Index() {\n  const data = useLoaderData();\n\n  return <Home data={data} />;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;;;ACAA;AAOA,kBAAiB;AAQF,iBAAiB;AAC9B,QAAM,OAAO;AAEb,SAAO,oCAAC,MAAD;AAAA,IAAM;AAAA;AAAA;",
+  "names": []
+}

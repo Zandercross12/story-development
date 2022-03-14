@@ -1,0 +1,49 @@
+/* Universal */
+
+:root {
+    --bg-primary: #3c3744;
+    --bg-primary-dark: #2b2830;
+    --bg-white: #fbfff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* Navbar */
+
+nav ul {
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(#000) width: 18rem;
+}
+
+.nav_top {
+    background-color: var(--bg-primary);
+}
+
+.nav_top button {
+    border-right: 1px solid #000;
+    display: block;
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+.nav_top button:hover {
+    background-color: var(--bg-primary-dark);
+}

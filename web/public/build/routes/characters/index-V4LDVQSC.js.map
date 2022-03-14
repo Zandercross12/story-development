@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\characters\\index.jsx?browser", "../../../../app/routes/characters/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\characters\\\\index.jsx\";", "export default function Characters() {\r\n  return (\r\n    <section id=\"characters\">\r\n      <div className=\"container\">\r\n        <h1>Characters</h1>\r\n        <p>\r\n          Welcome to the Characters page! This page will contain characters that\r\n          I have created. Each character has their own backstory and thinking\r\n          process that will be taken into consideration when creating the story.\r\n          I will do my best to work on this as much as possible.\r\n        </p>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,sBAAsB;AACnC,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,MAAI,eACJ,oCAAC,KAAD,MAAG;AAAA;",
+  "names": []
+}

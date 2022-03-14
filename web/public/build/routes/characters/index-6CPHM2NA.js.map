@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\characters\\index.jsx?browser", "../../../../app/routes/characters/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\characters\\\\index.jsx\";", "// react | remix\r\nimport { useLoaderData } from \"remix\";\r\n// sanity client\r\nimport client from \"~/lib/sanity/client\";\r\n// third-party\r\nimport groq from \"groq\";\r\n\r\nexport const loader = async () => {\r\n  const page = await client.fetch(groq`*[_type == \"pages\" && name == \"Home\"]`);\r\n\r\n  return page;\r\n};\r\n\r\nexport default function Characters() {\r\n  return (\r\n    <section id=\"characters\">\r\n      <div className=\"container\">\r\n        <h1></h1>\r\n        <p></p>\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;AAAA;;;ACAA;AAKA,kBAAiB;AAQF,sBAAsB;AACnC,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,OACA,oCAAC,KAAD;AAAA;",
+  "names": []
+}

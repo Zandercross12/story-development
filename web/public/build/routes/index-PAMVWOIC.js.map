@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx", "../../../app/components/Navbar/Navbar.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\index.jsx\";", "// components\nimport { Navbar } from \"~/components/Navbar/Navbar\";\n\nexport default function Index() {\n  return <Navbar />;\n}\n", "// react | remix\r\n\r\n// styles\r\nimport styles from \"./Navbar.css\";\r\n\r\nexport const links = () => [{ rel: \"stylesheet\", href: styles }];\r\n\r\nexport const Navbar = () => {\r\n  console.log(styles);\r\n  return <div className=\"test\">Navbar</div>;\r\n};\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;;;ACAA;;;;;;AAOO,IAAM,SAAS,MAAM;AAC1B,UAAQ,IAAI;AACZ,SAAO,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAAO;AAAA;;;ADNhB,iBAAiB;AAC9B,SAAO,oCAAC,QAAD;AAAA;",
+  "names": []
+}

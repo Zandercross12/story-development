@@ -1,0 +1,1 @@
+import{b as e,c as p}from"/build/_shared/chunk-P7UGURTB.js";import{b as n,e as o,f as t,m as r}from"/build/_shared/chunk-JQKLRX6F.js";t();t();var i=n(p());var m=()=>{let a=r();return o.createElement("section",{id:"story"},o.createElement("div",{className:"container"},o.createElement(e,{data:a})))},s=m;export{s as default};

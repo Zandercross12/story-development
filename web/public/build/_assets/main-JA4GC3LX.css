@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: #000;
+}
+
+ul {
+    background-color: #3c3744;
+    width: 18rem;
+}
