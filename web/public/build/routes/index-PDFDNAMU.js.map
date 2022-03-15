@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\index.jsx\";", "export default function Index() {\n  return <div></div>;\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,iBAAiB;AAC9B,SAAO,oCAAC,OAAD;AAAA;",
+  "names": []
+}

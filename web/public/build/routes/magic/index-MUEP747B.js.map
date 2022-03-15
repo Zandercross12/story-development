@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\magic\\index.jsx?browser", "../../../../app/routes/magic/index.jsx"],
+  "sourcesContent": ["export * from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\magic\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const Magic = () => {\r\n  return <div>Magic</div>;\r\n};\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,QAAQ,MAAM;AACzB,SAAO,mDAAC,OAAD,MAAK;AAAA;",
+  "names": []
+}

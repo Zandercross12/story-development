@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\locations\\index.jsx?browser", "../../../../app/routes/locations/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\locations\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const Locations = () => {\r\n  return (\r\n    <section id=\"locations\">\r\n      <div className=\"container\"></div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default Locations;\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,YAAY,MAAM;AAC7B,SACE,mDAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA;AAAA;AAKrB,IAAO,oBAAQ;",
+  "names": []
+}

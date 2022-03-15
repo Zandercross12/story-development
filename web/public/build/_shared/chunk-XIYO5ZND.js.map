@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/TextComponent/TextComponent.jsx"],
+  "sourcesContent": ["export const TextComponent = ({ data }) => {\r\n  return (\r\n    <>\r\n      <h1>{data[0]?.name}</h1>\r\n      {data[0].content.map((children) => {\r\n        let i = 0;\r\n\r\n        i++;\r\n        return (\r\n          <p key={i}>\r\n            {children.children[0].text}\r\n            <br />\r\n          </p>\r\n        );\r\n      })}\r\n    </>\r\n  );\r\n};\r\n\r\nexport default TextComponent;\r\n"],
+  "mappings": ";;;;;;AAAA;AAAO,IAAM,gBAAgB,CAAC,EAAE,WAAW;AACzC,SACE,0DACE,oCAAC,MAAD,MAAK,KAAK,IAAI,OACb,KAAK,GAAG,QAAQ,IAAI,CAAC,aAAa;AACjC,QAAI,IAAI;AAER;AACA,WACE,oCAAC,KAAD;AAAA,MAAG,KAAK;AAAA,OACL,SAAS,SAAS,GAAG,MACtB,oCAAC,MAAD;AAAA;AAAA;AAQZ,IAAO,wBAAQ;",
+  "names": []
+}

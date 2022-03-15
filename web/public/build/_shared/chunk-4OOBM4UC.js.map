@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/home/index.jsx"],
+  "sourcesContent": ["export const Home = ({ data }) => {\r\n  return (\r\n    <section id=\"home\">\r\n      <div className=\"container\">\r\n        <h1>{console.log(data)}</h1>\r\n        <p></p>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n"],
+  "mappings": ";;;;;;AAAA;AAAO,IAAM,OAAO,CAAC,EAAE,WAAW;AAChC,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,MAAK,QAAQ,IAAI,QACjB,oCAAC,KAAD;AAAA;",
+  "names": []
+}

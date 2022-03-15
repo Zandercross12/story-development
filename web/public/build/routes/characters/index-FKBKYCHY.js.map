@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\characters\\index.jsx?browser", "../../../../app/routes/characters/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\characters\\\\index.jsx\";", "// react | remix\r\nimport { useLoaderData } from \"remix\";\r\n// sanity client\r\nimport client from \"~/lib/sanity/client\";\r\n// components\r\nimport { TextComponent } from \"../../components/TextComponent/TextComponent\";\r\n// third-party\r\nimport groq from \"groq\";\r\n\r\nexport const loader = async () => {\r\n  const page = await client.fetch(\r\n    groq`*[_type == \"pages\" && name == \"Characters\"]`\r\n  );\r\n\r\n  return page;\r\n};\r\n\r\nexport default function Characters() {\r\n  const data = useLoaderData();\r\n\r\n  return (\r\n    <>\r\n      <section id=\"characters\">\r\n        <div className=\"container\">\r\n          <TextComponent data={data} />\r\n        </div>\r\n      </section>\r\n      <section id=\"preview\">\r\n        <div className=\"container\"></div>\r\n      </section>\r\n    </>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;AAAA;;;ACAA;AAOA,kBAAiB;AAUF,sBAAsB;AACnC,QAAM,OAAO;AAEb,SACE,0DACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,eAAD;AAAA,IAAe;AAAA,QAGnB,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA;AAAA;",
+  "names": []
+}

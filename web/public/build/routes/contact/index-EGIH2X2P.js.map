@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\contact\\index.jsx?browser", "../../../../app/routes/contact/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\contact\\\\index.jsx\";", "export const Contact = () => {\r\n  return (\r\n    <section id=\"contact\">\r\n      <div className=\"container\">\r\n        <h1>Contact</h1>\r\n        <p>\r\n          Welcome to the Contact page! This page will have some contact info for\r\n          you to message me. You can give me feedback or somethin, idk.\r\n        </p>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default Contact;\r\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAO,IAAM,UAAU,MAAM;AAC3B,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,MAAI,YACJ,oCAAC,KAAD,MAAG;AAAA;AASX,IAAO,kBAAQ;",
+  "names": []
+}

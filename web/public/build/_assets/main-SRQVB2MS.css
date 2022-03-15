@@ -1,0 +1,44 @@
+/* Universal */
+
+:root {
+    --bg-primary: #3c3744;
+    --bg-primary-dark: #2b2830;
+}
+
+* {
+    background-color: #fbfff1;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    color: #000;
+}
+
+
+/* Navbar */
+
+nav ul {
+    background-color: var(--bg-primary);
+    width: 18rem;
+}
+
+.nav_top {
+    background-color: var(--bg-primary);
+}
+
+.nav_top a {
+    border-right: 1px solid #000;
+    display: block;
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+.nav_top a:hover {
+    background-color: var(--bg-primary-dark);
+}

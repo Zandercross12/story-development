@@ -1,0 +1,23 @@
+import {
+  React,
+  init_react
+} from "/build/_shared/chunk-B7AQWGVQ.js";
+
+// app/components/TextComponent/TextComponent.jsx
+init_react();
+var TextComponent = ({ data }) => {
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("h1", null, data[0]?.name), data[0].content.map((children) => {
+    let i = 0;
+    i++;
+    return /* @__PURE__ */ React.createElement("p", {
+      key: i
+    }, children.children[0].text, /* @__PURE__ */ React.createElement("br", null));
+  }));
+};
+var TextComponent_default = TextComponent;
+
+export {
+  TextComponent,
+  TextComponent_default
+};
+//# sourceMappingURL=/build/_shared/chunk-XIYO5ZND.js.map

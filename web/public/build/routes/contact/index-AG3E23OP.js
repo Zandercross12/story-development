@@ -1,0 +1,1 @@
+import{b as r,c as p}from"/build/_shared/chunk-P7UGURTB.js";import{b as n,e as t,f as o,m as e}from"/build/_shared/chunk-JQKLRX6F.js";o();o();var c=n(p());var i=()=>{let a=e();return t.createElement("section",{id:"contact"},t.createElement("div",{className:"container"},t.createElement(r,{data:a})))},m=i;export{m as default};

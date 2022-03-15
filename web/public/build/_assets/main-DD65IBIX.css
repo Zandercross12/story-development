@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #3c3744;
+    width: 5rem;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #000;
+}

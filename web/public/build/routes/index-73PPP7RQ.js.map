@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\index.jsx\";", "// react | remix\nimport { useLoaderData } from \"remix\";\n// sanity client\nimport client from \"~/lib/sanity/client\";\n// third-party\nimport groq from \"groq\";\n\nexport const loader = async () => {\n  const page = await client.fetch(groq`*[_type == \"pages\" && name == \"Home\"]`);\n\n  return page;\n};\n\nexport default function Index() {\n  const data = useLoaderData();\n\n  console.log(\n    data[0].content.map((childText) => {\n      let i = 0;\n\n      i++;\n      return (\n        <p key={i}>\n          {console.log(childText.text)} <br />\n        </p>\n      );\n    })\n  );\n\n  return (\n    <section id=\"home\">\n      <div className=\"container\">\n        <h1>{data[0]?.name}</h1>\n        {data[0]?.content[0].children[0].text}\n      </div>\n    </section>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;;AAAA;;;ACAA;AAKA,kBAAiB;AAQF,iBAAiB;AAC9B,QAAM,OAAO;AAEb,UAAQ,IACN,KAAK,GAAG,QAAQ,IAAI,CAAC,cAAc;AACjC,QAAI,IAAI;AAER;AACA,WACE,oCAAC,KAAD;AAAA,MAAG,KAAK;AAAA,OACL,QAAQ,IAAI,UAAU,OAAM,KAAC,oCAAC,MAAD;AAAA;AAMtC,SACE,oCAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,MAAD,MAAK,KAAK,IAAI,OACb,KAAK,IAAI,QAAQ,GAAG,SAAS,GAAG;AAAA;",
+  "names": []
+}

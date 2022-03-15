@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/home/index.jsx"],
+  "sourcesContent": ["import React from \"react\";\r\n\r\nexport const Home = () => {\r\n  return (\r\n    <section id=\"home\">\r\n      <div className=\"container\">test</div>\r\n    </section>\r\n  );\r\n};\r\n"],
+  "mappings": ";;;;;;;AAAA;AAAA,mBAAkB;AAEX,IAAM,OAAO,MAAM;AACxB,SACE,mDAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAAY;AAAA;",
+  "names": []
+}

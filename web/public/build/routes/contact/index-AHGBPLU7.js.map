@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\contact\\index.jsx?browser", "../../../../app/routes/contact/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\contact\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const Contact = () => {\r\n  return <div>Contact</div>;\r\n};\r\n\r\nexport default Contact;\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,UAAU,MAAM;AAC3B,SAAO,mDAAC,OAAD,MAAK;AAAA;AAGd,IAAO,kBAAQ;",
+  "names": []
+}

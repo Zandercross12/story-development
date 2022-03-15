@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\home\\index.jsx?browser", "../../../../app/routes/home/index.jsx"],
+  "sourcesContent": ["export * from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\home\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const Home = () => {\r\n  return <section id=\"home\"></section>;\r\n};\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,OAAO,MAAM;AACxB,SAAO,mDAAC,WAAD;AAAA,IAAS,IAAG;AAAA;AAAA;",
+  "names": []
+}

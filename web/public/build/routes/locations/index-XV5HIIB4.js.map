@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\web\\app\\routes\\locations\\index.jsx?browser", "../../../../app/routes/locations/index.jsx"],
+  "sourcesContent": ["export { default } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\web\\\\app\\\\routes\\\\locations\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport const Locations = () => {\r\n  return (\r\n    <section id=\"locations\">\r\n      <div className=\"container\">\r\n        <h1>Locations</h1>\r\n        <p>\r\n          Welcome to the Locations page! This page will contain a list of\r\n          locations for the story and each location will contain a list of\r\n          events that have happened as well.\r\n        </p>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default Locations;\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,IAAM,YAAY,MAAM;AAC7B,SACE,mDAAC,WAAD;AAAA,IAAS,IAAG;AAAA,KACV,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,mDAAC,MAAD,MAAI,cACJ,mDAAC,KAAD,MAAG;AAAA;AAUX,IAAO,oBAAQ;",
+  "names": []
+}

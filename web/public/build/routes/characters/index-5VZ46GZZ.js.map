@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:C:\\Users\\raymo\\OneDrive\\Desktop\\web development\\story-project\\story-development\\app\\routes\\characters\\index.jsx?browser", "../../../../app/routes/characters/index.jsx"],
+  "sourcesContent": ["export { links } from \"C:\\\\Users\\\\raymo\\\\OneDrive\\\\Desktop\\\\web development\\\\story-project\\\\story-development\\\\app\\\\routes\\\\characters\\\\index.jsx\";", "import React from \"react\";\r\n\r\nexport function links() {\r\n  return [\r\n    {\r\n      rel: \"stylesheet\",\r\n      href: styles,\r\n    },\r\n  ];\r\n}\r\n\r\nexport const Characters = () => {\r\n  return <div>Characters</div>;\r\n};\r\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEX,iBAAiB;AACtB,SAAO;AAAA,IACL;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA;AAAA;AAAA;",
+  "names": []
+}

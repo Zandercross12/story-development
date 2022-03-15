@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../node_modules/groq/lib/groq.js"],
+  "sourcesContent": ["\"use strict\";\n\n/* eslint-disable @typescript-eslint/no-var-requires */\nmodule.exports = function groq(strings) {\n  for (var _len = arguments.length, keys = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    keys[_key - 1] = arguments[_key];\n  }\n\n  var lastIndex = strings.length - 1;\n  return strings.slice(0, lastIndex).reduce(function (acc, str, i) {\n    return acc + str + keys[i];\n  }, '') + strings[lastIndex];\n};"],
+  "mappings": ";;;;;;AAAA;AAAA;AAAA;AAAA;AAGA,WAAO,UAAU,cAAc,SAAS;AACtC,eAAS,OAAO,UAAU,QAAQ,OAAO,IAAI,MAAM,OAAO,IAAI,OAAO,IAAI,IAAI,OAAO,GAAG,OAAO,MAAM,QAAQ;AAC1G,aAAK,OAAO,KAAK,UAAU;AAAA;AAG7B,UAAI,YAAY,QAAQ,SAAS;AACjC,aAAO,QAAQ,MAAM,GAAG,WAAW,OAAO,SAAU,KAAK,KAAK,GAAG;AAC/D,eAAO,MAAM,MAAM,KAAK;AAAA,SACvB,MAAM,QAAQ;AAAA;AAAA;AAAA;",
+  "names": []
+}
