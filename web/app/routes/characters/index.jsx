@@ -24,7 +24,12 @@ export const loader = async () => {
     groq`*[_type == "pages" && name == "Characters"]`
   );
 
-  return page;
+  const characters = await client.fetch(groq`*[_type == "characters"]`);
+
+  return {
+    page,
+    characters,
+  };
 };
 
 export default function Characters() {
@@ -34,13 +39,13 @@ export default function Characters() {
     <>
       <section id="characters">
         <div className="container">
-          <TextComponent data={data} />
+          <TextComponent data={data.page} />
         </div>
       </section>
       <section id="latest">
         <div className="container">
           <h1>Latest Characters</h1>
-          <CharacterPreview />
+          <CharacterPreview data={data.characters} />
         </div>
       </section>
     </>
