@@ -1,18 +1,19 @@
+// remix
 import { Link } from "remix";
+// third-party
 import imageUrlBuilder from "@sanity/image-url";
 import client from "~/lib/sanity/client";
 
 const builder = imageUrlBuilder(client);
 
 export const CharacterPreview = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <ul className="character_list">
         {data.map((character) => {
           return (
             <li className="character_list_item">
-              <Link to="/characters">
+              <Link to={`/characters/${character.slug.current}`}>
                 <div className="image_container">
                   {!character.image ? (
                     <img src="/default_avatar.svg" alt="character" />
