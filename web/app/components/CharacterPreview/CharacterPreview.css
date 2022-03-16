@@ -1,0 +1,20 @@
+.character_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.character_list_item {
+    display: flex;
+    flex-basis: 33.333%;
+    padding: 10px;
+}
+
+.image_container {
+    width: 100%;
+}
+
+.image_container img {
+    height: 100%;
+    width: 100%;
+}

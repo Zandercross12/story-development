@@ -4,16 +4,32 @@ import { useLoaderData } from "remix";
 import client from "~/lib/sanity/client";
 // components
 import { TextComponent } from "../../components/TextComponent/TextComponent";
+import { CharacterPreview } from "~/components/CharacterPreview/CharacterPreview";
 // third-party
 import groq from "groq";
-import { CharacterPreview } from "~/components/CharacterPreview/CharacterPreview";
+// styles
+import styles from "../../components/CharacterPreview/CharacterPreview.css";
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+}
 
 export const loader = async () => {
   const page = await client.fetch(
     groq`*[_type == "pages" && name == "Characters"]`
   );
 
-  return page;
+  const characters = await client.fetch(groq`*[_type == "characters"]`);
+
+  return {
+    page,
+    characters,
+  };
 };
 
 export default function Characters() {
@@ -23,13 +39,13 @@ export default function Characters() {
     <>
       <section id="characters">
         <div className="container">
-          <TextComponent data={data} />
+          <TextComponent data={data.page} />
         </div>
       </section>
       <section id="latest">
         <div className="container">
           <h1>Latest Characters</h1>
-          <CharacterPreview />
+          <CharacterPreview data={data.characters} />
         </div>
       </section>
     </>
