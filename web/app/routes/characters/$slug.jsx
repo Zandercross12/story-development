@@ -23,22 +23,47 @@ export const loader = async (context) => {
     { slug }
   );
 
-  return character;
+  const refMagicAbilities = await client.fetch(
+    groq`*[_type == "magicAbilities"]`
+  );
+  const refCharacter = await client.fetch(groq`*[_type == "characters"]`);
+
+  return {
+    character,
+    refCharacter,
+    refMagicAbilities,
+  };
 };
 
 export const Character = () => {
   const data = useLoaderData();
 
-  console.log(data[0]);
+  const character = data.character[0];
+  const magicAbilities = data.refMagicAbilities;
+
+  console.log(character);
+
+  let i = 0;
 
   return (
     <ul className="character_sidebar">
-      {Object.keys(data[0]).map((key) => {
-        const value = data[0][key];
+      {Object.keys(character).map((key) => {
+        const value = character[key];
+        i++;
 
+        switch (key) {
+          case "_createdAt":
+          case "_id":
+          case "_rev":
+          case "_type":
+          case "_updatedAt":
+          case "slug":
+            return;
+            break;
+        }
         return (
-          <li key={value._id}>
-            <h1>{key}</h1>
+          <li key={i}>
+            <button>{key}</button>
           </li>
         );
       })}
