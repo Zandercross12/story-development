@@ -1,0 +1,20 @@
+.character_sidebar {
+  background-color: var(--bg-gray);
+  border-right: 1px solid var(--font-black);
+  height: calc(100vh - 54px);
+  width: 15rem;
+}
+
+.character_list_item button {
+  border-bottom: 1px solid var(--font-black);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  text-transform: capitalize;
+  transition: 200ms ease-out background-color;
+  width: 100%;
+}
+
+.character_list_item button:hover {
+  background-color: var(--bg-gray-hover);
+}

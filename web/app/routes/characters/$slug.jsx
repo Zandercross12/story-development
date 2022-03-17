@@ -59,10 +59,16 @@ export const Character = () => {
           case "_updatedAt":
           case "slug":
             return;
+          case "dateofbirth":
+            key = "date of birth";
+            break;
+          case "dateofdeath":
+            key = "date of death";
+
             break;
         }
         return (
-          <li key={i}>
+          <li className="character_list_item" key={i}>
             <button>{key}</button>
           </li>
         );
