@@ -5,6 +5,8 @@
     --bg-primary: #3c3744;
     --bg-primary-dark: #2b2830;
     --bg-white: #fbfff1;
+    --bg-gray: #86848a;
+    --bg-gray-hover: #9e98a5;
     --bg-light-gray: #b9b9b9;
     /* colors */
     --font-black: #000;
@@ -47,6 +49,10 @@ ul {
     list-style-type: none;
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 
 /* Navbar */
 
@@ -55,7 +61,7 @@ ul {
     display: none;
     height: 100%;
     opacity: 0;
-    position: absolute;
+    position: fixed;
     transition: 200ms ease-out opacity;
     top: 0;
     width: 100%;

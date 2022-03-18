@@ -4,18 +4,19 @@
     justify-content: space-around;
 }
 
-.character_list_item {
+.list_character {
     display: flex;
     flex-basis: 33.333%;
     padding: 10px;
 }
 
-.character_list_item a {
+.list_character a {
     width: 100%;
 }
 
 .image_container {
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .image_container img {
