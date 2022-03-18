@@ -43,7 +43,7 @@ export const Character = () => {
 
       <section>
         <div className="container_sidebar">
-          <div className="image_container">
+          <div className="character_image_container">
             {!character.image ? (
               <img src="/default_avatar.svg" alt="character" />
             ) : (
