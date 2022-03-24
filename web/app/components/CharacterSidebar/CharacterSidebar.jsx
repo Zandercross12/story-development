@@ -17,20 +17,26 @@ export const CharacterSidebar = ({ character }) => {
           case "_updatedAt":
           case "slug":
           case "description":
-          case "image":
-          case "name":
-            return;
           case "dateofbirth":
-            keyName = "date of birth";
-            break;
           case "dateofdeath":
-            keyName = "date of death";
+          case "image":
+          case "dislikes":
+            return;
+          case "likes":
+            keyName = "Likes" + "/" + "Dislikes";
+            key = "likesdislikes";
+            break;
+          case "name":
+            keyName = character.name;
+            key = "";
             break;
         }
 
         return (
           <li className="character_list_item" key={i}>
-            <Link to={key}>{keyName}</Link>
+            <Link to={"/characters/" + character?.slug.current + "/" + key}>
+              {keyName}
+            </Link>
           </li>
         );
       })}

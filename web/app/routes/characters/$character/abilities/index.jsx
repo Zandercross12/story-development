@@ -57,15 +57,13 @@ export const Abilities = () => {
 
               if (abilityRefId) {
                 abilityRef = magicAbilities.find(
-                  (ability) => ability._id === abilityRefId
+                  (abilities) => abilities._id === abilityRefId
                 );
               }
 
-              console.log(abilityRef);
-
               return (
                 <li key={i}>
-                  <h2>- {abilityRef?.name}</h2>
+                  <h2>{abilityRef?.name}</h2>
                   <br />
                   <p>{abilityRef?.description}</p>
                   <br />

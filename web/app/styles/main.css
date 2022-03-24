@@ -57,6 +57,10 @@ ul {
     text-transform: capitalize;
 }
 
+.comma_list:not(:last-child):after {
+    content: ", ";
+}
+
 
 /* Navbar */
 
