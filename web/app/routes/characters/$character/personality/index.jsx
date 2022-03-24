@@ -30,33 +30,27 @@ export const loader = async (context) => {
   };
 };
 
-export const LikesDislikes = () => {
+export const Personality = () => {
   const data = useLoaderData();
 
   const character = data.character[0];
+
+  let i = 0;
 
   return (
     <>
       <CharacterSidebar character={character} />
       <section>
         <div className="container">
-          <h1>Likes/Dislikes</h1>
-          <h2>Likes:</h2>
-          <br />
+          <h1>Personality</h1>
           <p>
-            {character?.likes.map((likedItem) => {
-              return <span className="comma_list">{likedItem}</span>;
-            })}
-          </p>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <h2>Dislikes:</h2>
-          <br />
-          <p>
-            {character?.dislikes.map((dislikedItem) => {
-              return <span className="comma_list">{dislikedItem}</span>;
+            {character?.personality.map((personalityText) => {
+              return (
+                <span key={i}>
+                  {personalityText.children[0].text}
+                  <br />
+                </span>
+              );
             })}
           </p>
         </div>
@@ -65,4 +59,4 @@ export const LikesDislikes = () => {
   );
 };
 
-export default LikesDislikes;
+export default Personality;
