@@ -39,8 +39,6 @@ export const Abilities = () => {
 
   const magicAbilities = data.reference;
 
-  console.log(magicAbilities);
-
   let i = 0;
 
   return (
@@ -50,14 +48,39 @@ export const Abilities = () => {
         <div className="container">
           <h1>Abilities</h1>
           <ul>
-            {character.abilities.map((ability) => {
-              console.log(ability);
+            {character?.abilities.map((ability) => {
               i++;
 
-              const abilityRef = ability._ref;
+              const abilityRefId = ability?._ref;
+
+              let abilityRef;
+
+              if (abilityRefId) {
+                abilityRef = magicAbilities.find(
+                  (ability) => ability._id === abilityRefId
+                );
+              }
+
+              console.log(abilityRef);
+
               return (
                 <li key={i}>
-                  <h2></h2>
+                  <h2>- {abilityRef?.name}</h2>
+                  <br />
+                  <p>{abilityRef?.description}</p>
+                  <br />
+                  <h3>Action</h3>
+                  <br />
+                  <p>
+                    {abilityRef?.action.map((actionText) => {
+                      return (
+                        <span key={actionText?.children[0].key}>
+                          {actionText.children[0].text} <br />
+                        </span>
+                      );
+                    })}
+                  </p>
+                  <br />
                 </li>
               );
             })}

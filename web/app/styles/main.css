@@ -45,6 +45,10 @@ button {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 1.3em;
+}
+
 ul {
     list-style-type: none;
 }
