@@ -25,9 +25,10 @@ export const loader = async (context) => {
     { slug }
   );
 
-  // TODO: Add logic to match reference data for magic abilities
+  const reference = await client.fetch(groq`*[_type == "magicAbilities"]`);
   return {
     character,
+    reference,
   };
 };
 
@@ -36,7 +37,7 @@ export const Abilities = () => {
 
   const character = data.character[0];
 
-  console.log(character);
+  const magicAbilities = data.reference;
 
   let i = 0;
 
@@ -47,11 +48,37 @@ export const Abilities = () => {
         <div className="container">
           <h1>Abilities</h1>
           <ul>
-            {character.abilities.map((ability) => {
+            {character?.abilities.map((ability) => {
               i++;
+
+              const abilityRefId = ability?._ref;
+
+              let abilityRef;
+
+              if (abilityRefId) {
+                abilityRef = magicAbilities.find(
+                  (abilities) => abilities._id === abilityRefId
+                );
+              }
+
               return (
                 <li key={i}>
-                  <h2></h2>
+                  <h2>{abilityRef?.name}</h2>
+                  <br />
+                  <p>{abilityRef?.description}</p>
+                  <br />
+                  <h3>Action</h3>
+                  <br />
+                  <p>
+                    {abilityRef?.action.map((actionText) => {
+                      return (
+                        <span key={actionText?.children[0].key}>
+                          {actionText.children[0].text} <br />
+                        </span>
+                      );
+                    })}
+                  </p>
+                  <br />
                 </li>
               );
             })}

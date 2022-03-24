@@ -62,6 +62,22 @@ export const Character = () => {
           </div>
         </section>
       )}
+      {character.dateofbirth && (
+        <section>
+          <div className="container_sidebar">
+            <h1 className="capitalize">date of birth</h1>
+            <p>{character.dateofbirth}</p>
+          </div>
+        </section>
+      )}
+      {character.dateofdeath && (
+        <section>
+          <div className="container_sidebar">
+            <h1 className="capitalize">date of death</h1>
+            <p>{character.dateofdeath}</p>
+          </div>
+        </section>
+      )}
     </>
   );
 };

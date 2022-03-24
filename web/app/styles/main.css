@@ -45,12 +45,20 @@ button {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 1.3em;
+}
+
 ul {
     list-style-type: none;
 }
 
 .capitalize {
     text-transform: capitalize;
+}
+
+.comma_list:not(:last-child):after {
+    content: ", ";
 }
 
 
