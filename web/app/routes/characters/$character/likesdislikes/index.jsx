@@ -56,7 +56,11 @@ export const Backstory = () => {
         <div className="container">
           <h2>Dislikes:</h2>
           <br />
-          <p>{character?.dislikes}</p>
+          <p>
+            {character?.dislikes.map((dislikedItem) => {
+              return <span className="comma_list">{dislikedItem}</span>;
+            })}
+          </p>
         </div>
       </section>
     </>
