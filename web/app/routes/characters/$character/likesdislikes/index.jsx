@@ -30,12 +30,10 @@ export const loader = async (context) => {
   };
 };
 
-export const Backstory = () => {
+export const LikesDislikes = () => {
   const data = useLoaderData();
 
   const character = data.character[0];
-
-  console.log(character);
 
   return (
     <>
@@ -67,4 +65,4 @@ export const Backstory = () => {
   );
 };
 
-export default Backstory;
+export default LikesDislikes;
