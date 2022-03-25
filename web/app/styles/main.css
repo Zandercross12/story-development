@@ -61,6 +61,10 @@ ul {
     content: ", ";
 }
 
+.link_underline {
+    text-decoration: underline;
+}
+
 
 /* Navbar */
 
