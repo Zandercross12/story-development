@@ -46,6 +46,7 @@ export const relations = () => {
       <section>
         <div className="container">
           <h1>Relations</h1>
+          <div className="separator"></div>
           <ul>
             {character?.relations.map((relation) => {
               i++;
@@ -78,7 +79,7 @@ export const relations = () => {
                   >
                     Read More
                   </Link>
-                  <br />
+                  <div className="separator"></div>
                 </li>
               );
             })}
