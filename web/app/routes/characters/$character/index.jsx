@@ -51,30 +51,30 @@ export const Character = () => {
             )}
           </div>
           <h1 className="capitalize">name</h1>
-          <p>{character.name}</p>
+          <p>{character?.name}</p>
         </div>
       </section>
-      {character.description && (
+      {character?.description && (
         <section>
           <div className="container_sidebar">
             <h1 className="capitalize">description</h1>
-            <p>{character.description}</p>
+            <p>{character?.description}</p>
           </div>
         </section>
       )}
-      {character.dateofbirth && (
+      {character?.dateofbirth && (
         <section>
           <div className="container_sidebar">
             <h1 className="capitalize">date of birth</h1>
-            <p>{character.dateofbirth}</p>
+            <p>{character?.dateofbirth}</p>
           </div>
         </section>
       )}
-      {character.dateofdeath && (
+      {character?.dateofdeath && (
         <section>
           <div className="container_sidebar">
             <h1 className="capitalize">date of death</h1>
-            <p>{character.dateofdeath}</p>
+            <p>{character?.dateofdeath}</p>
           </div>
         </section>
       )}

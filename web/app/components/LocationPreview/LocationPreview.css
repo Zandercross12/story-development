@@ -1,0 +1,25 @@
+.location_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list_location {
+  display: flex;
+  flex-basis: 33.333%;
+  padding: 10px;
+}
+
+.list_location a {
+  width: 100%;
+}
+
+.image_container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image_container img {
+  height: 100%;
+  width: 100%;
+}
