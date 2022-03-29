@@ -5,7 +5,7 @@ import client from "~/lib/sanity/client";
 import groq from "groq";
 
 export const loader = async () => {
-  return await client.fetch(groq`*[_type == "story"]`);
+  return client.fetch(groq`*[_type == "story"]`);
 };
 
 export const LocationEvents = ({ data }) => {
