@@ -1,0 +1,17 @@
+.events_list {
+  display: flex;
+  justify-content: center;
+}
+
+.event_item {
+  display: flex;
+  flex-basis: 30;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.event_content {
+}
+
+.event_image_container {
+}

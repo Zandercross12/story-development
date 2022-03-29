@@ -3,9 +3,17 @@ import { useLoaderData } from "remix";
 // third party
 import client from "~/lib/sanity/client";
 import groq from "groq";
-import imageUrlBuilder from "@sanity/image-url";
+// components
 import LocationEvents from "~/components/LocationEvents/LocationEvents";
-import Character from "~/routes/characters/$character";
+// styles
+import styles from "../../../components/LocationEvents/LocationEvents.css";
+
+export const links = () => [
+  {
+    rel: "stylesheet",
+    href: styles,
+  },
+];
 
 export const loader = async (context) => {
   const slug = context.params.location;
