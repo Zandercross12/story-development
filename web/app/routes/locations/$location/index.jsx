@@ -14,8 +14,12 @@ export const loader = async (context) => {
     groq`*[_type == "locations" && slug.current == $slug]`,
     { slug }
   );
+
+  const storyRef = await client.fetch(groq`*[_type == "story"]`);
+
   return {
     location,
+    storyRef,
   };
 };
 
@@ -23,6 +27,8 @@ export const Location = () => {
   const data = useLoaderData();
 
   const location = data.location[0];
+
+  const stories = data.storyRef;
 
   return (
     <>
@@ -47,7 +53,7 @@ export const Location = () => {
       <section>
         <div class="container">
           <h1>Location Events</h1>
-          <LocationEvents data={location} />
+          <LocationEvents location={location} stories={stories} />
         </div>
       </section>
     </>

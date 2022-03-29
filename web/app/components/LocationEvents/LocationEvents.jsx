@@ -1,21 +1,31 @@
 // remix
-import { Link, useLoaderData } from "remix";
-// third party
-import client from "~/lib/sanity/client";
-import groq from "groq";
+import { Link } from "remix";
 
-export const loader = async () => {
-  return client.fetch(groq`*[_type == "story"]`);
-};
+export const LocationEvents = ({ location, stories }) => {
+  console.log(location, stories);
 
-export const LocationEvents = ({ data }) => {
-  const eventsRef = useLoaderData();
-
-  console.log(eventsRef);
+  let i = 0;
 
   return (
     <>
-      <h1></h1>
+      {location?.events.map((event) => {
+        i++;
+
+        const eventReferenceId = event?._ref;
+
+        let eventRef;
+
+        if (eventReferenceId) {
+          eventRef = stories.find((story) => story._id === eventReferenceId);
+        }
+
+        return (
+          <div key={i}>
+            <h2>{eventRef?.name}</h2>
+            <p>{eventRef?.description}</p>
+          </div>
+        );
+      })}
     </>
   );
 };
