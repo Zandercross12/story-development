@@ -38,6 +38,8 @@ export const Location = () => {
 
   const stories = data.storyRef;
 
+  // TODO: Add Sort Feature
+
   return (
     <>
       <section>
@@ -60,7 +62,7 @@ export const Location = () => {
       </section>
       <section>
         <div className="container">
-          <h1>Location Events</h1>
+          <h1>Location Events (Latest)</h1>
           <LocationEvents location={location} stories={stories} />
         </div>
       </section>

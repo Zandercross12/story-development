@@ -18,20 +18,25 @@
   display: flex;
   flex-basis: 33.333%;
   justify-content: space-between;
-  padding: 10px;
   min-width: 200px;
 }
 
-.event_item:last-child .location_event_image_container {
-  display: none;
+.location_events_list {
+  background-color: var(--bg-light-gray);
+  border-bottom: 15px solid var(--bg-primary);
+  height: 100%;
+  padding: 20px;
+  transition: 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+}
+
+.location_events_list:hover {
+  background-color: var(--bg-gray);
+  color: var(--font-white);
 }
 
 .event_content {
-  width: 90%;
-}
-
-.location_event_image_container {
-  align-items: center;
   display: flex;
-  width: 10%;
+  flex-direction: column;
+  justify-content: space-between;
 }

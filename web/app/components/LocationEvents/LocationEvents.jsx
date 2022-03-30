@@ -17,7 +17,6 @@ export const LocationEvents = ({ location, stories }) => {
           eventRef = stories.find((story) => story._id === eventReferenceId);
         }
 
-        // TODO: Sort events by date and fix styling
         const startDisplayDate = new Date(eventRef?.startDate);
         const endDisplayDate = new Date(eventRef?.endDate);
 
@@ -55,19 +54,21 @@ export const LocationEvents = ({ location, stories }) => {
 
         return (
           <li className="event_item" key={i}>
-            <div className="event_content">
-              <h2>{eventRef?.name}</h2>
-              <p>
-                {eventRef?.startDate ? startDate : ""}{" "}
-                {eventRef?.startDate && eventRef?.endDate ? "-" : ""}{" "}
-                {eventRef?.endDate ? endDate : ""}
-              </p>
-              <br />
-              <p>{eventRef?.description}</p>
-            </div>
-            <div className="location_event_image_container">
-              <img src="/right-long-solid.svg" alt="location" />
-            </div>
+            <Link
+              to={`/story/events/${eventRef?.slug.current}`}
+              className="location_events_list"
+            >
+              <div className="event_content">
+                <h2>{eventRef?.name}</h2>
+                <p>
+                  {eventRef?.startDate ? startDate : ""}{" "}
+                  {eventRef?.startDate && eventRef?.endDate ? "-" : ""}{" "}
+                  {eventRef?.endDate ? endDate : ""}
+                </p>
+                <br />
+                <p>{eventRef?.description}</p>
+              </div>
+            </Link>
           </li>
         );
       })}
