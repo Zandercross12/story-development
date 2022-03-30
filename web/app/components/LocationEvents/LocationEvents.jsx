@@ -18,15 +18,54 @@ export const LocationEvents = ({ location, stories }) => {
         }
 
         // TODO: Sort events by date and fix styling
+        const startDisplayDate = new Date(eventRef?.startDate);
+        const endDisplayDate = new Date(eventRef?.endDate);
+
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        const startDisplayMonth = months[startDisplayDate.getMonth()];
+        const endDisplayMonth = months[endDisplayDate.getMonth()];
+
+        const startDate =
+          startDisplayMonth +
+          " " +
+          (startDisplayDate.getDate() + 1) +
+          ", " +
+          startDisplayDate.getFullYear();
+
+        const endDate =
+          endDisplayMonth +
+          " " +
+          (endDisplayDate.getDate() + 1) +
+          ", " +
+          endDisplayDate.getFullYear();
 
         return (
           <li className="event_item" key={i}>
             <div className="event_content">
               <h2>{eventRef?.name}</h2>
+              <p>
+                {eventRef?.startDate ? startDate : ""}{" "}
+                {eventRef?.startDate && eventRef?.endDate ? "-" : ""}{" "}
+                {eventRef?.endDate ? endDate : ""}
+              </p>
               <br />
               <p>{eventRef?.description}</p>
             </div>
-            <div className="event_image_container">
+            <div className="location_event_image_container">
               <img src="/right-long-solid.svg" alt="location" />
             </div>
           </li>

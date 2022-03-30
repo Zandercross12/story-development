@@ -1,5 +1,16 @@
+.location_image_container {
+  height: 500px;
+  width: 100%;
+}
+
+.location_image_container img {
+  height: 100%;
+  width: 100%;
+}
+
 .events_list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -8,10 +19,19 @@
   flex-basis: 33.333%;
   justify-content: space-between;
   padding: 10px;
+  min-width: 200px;
+}
+
+.event_item:last-child .location_event_image_container {
+  display: none;
 }
 
 .event_content {
+  width: 90%;
 }
 
-.event_image_container {
+.location_event_image_container {
+  align-items: center;
+  display: flex;
+  width: 10%;
 }

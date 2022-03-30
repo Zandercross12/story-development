@@ -26,9 +26,15 @@ export default {
       type: "text",
     },
     {
-      name: "date",
-      title: "Date",
-      description: "When did this happen?",
+      name: "startDate",
+      title: "Start Date",
+      description: "When did this begin?",
+      type: "date",
+    },
+    {
+      name: "endDate",
+      title: "End Date",
+      description: "When did this end?",
       type: "date",
     },
     {

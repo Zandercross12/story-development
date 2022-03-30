@@ -41,8 +41,8 @@ export const Location = () => {
   return (
     <>
       <section>
-        <div class="container">
-          <div class="location_image_container">
+        <div className="container">
+          <div className="location_image_container">
             {!location.image ? (
               <img src="/building-columns-solid.svg" alt="location" />
             ) : (
@@ -52,14 +52,14 @@ export const Location = () => {
         </div>
       </section>
       <section id="location">
-        <div class="container">
+        <div className="container">
           <h1>{location?.name}</h1>
           <p>{location?.description}</p>
-          <div class="separator"></div>
+          <div className="separator"></div>
         </div>
       </section>
       <section>
-        <div class="container">
+        <div className="container">
           <h1>Location Events</h1>
           <LocationEvents location={location} stories={stories} />
         </div>
