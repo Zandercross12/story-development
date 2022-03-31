@@ -4,6 +4,7 @@ import { useLoaderData } from "remix";
 import client from "~/lib/sanity/client";
 // third-party
 import groq from "groq";
+// components
 import TextComponent from "~/components/TextComponent/TextComponent";
 
 export const loader = async () => {
@@ -16,11 +17,18 @@ export const Story = () => {
   const data = useLoaderData();
 
   return (
-    <section id="story">
-      <div className="container">
-        <TextComponent data={data} />
-      </div>
-    </section>
+    <>
+      <section id="story">
+        <div className="container">
+          <TextComponent data={data} />
+        </div>
+      </section>
+      <section id="timeline">
+        <div class="container">
+          <h1>Timeline</h1>
+        </div>
+      </section>
+    </>
   );
 };
 
