@@ -6,11 +6,19 @@ import client from "~/lib/sanity/client";
 import groq from "groq";
 // components
 import TextComponent from "~/components/TextComponent/TextComponent";
+import Timeline from "~/components/Timeline/Timeline";
 
 export const loader = async () => {
   const page = await client.fetch(groq`*[_type == "pages" && name == "Story"]`);
 
-  return page;
+  const mainTimeline = await client.fetch(
+    groq`*[_type == "timeline" && name == "Main Timeline"]`
+  );
+
+  return {
+    page,
+    mainTimeline,
+  };
 };
 
 export const Story = () => {
@@ -20,12 +28,13 @@ export const Story = () => {
     <>
       <section id="story">
         <div className="container">
-          <TextComponent data={data} />
+          <TextComponent data={data.page} />
         </div>
       </section>
       <section id="timeline">
         <div class="container">
           <h1>Timeline</h1>
+          <Timeline data={data.mainTimeline} />
         </div>
       </section>
     </>
