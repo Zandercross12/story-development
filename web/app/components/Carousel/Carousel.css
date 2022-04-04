@@ -18,7 +18,7 @@
 
 .carousel_list_item a {
   display: block;
-  height: 100%;
+  height: 270px;
   padding: 20px;
   width: 100%;
 }
@@ -42,7 +42,20 @@
 
 .carousel_card_description {
   position: relative;
-  height: 5rem;
+  height: 4rem;
   line-height: 1rem;
   overflow-y: hidden;
+}
+
+.carousel_item_read_more {
+  color: var(--bg-primary);
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.carousel_arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
