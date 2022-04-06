@@ -43,13 +43,14 @@ export const Magic = () => {
       <section id="magicConcept">
         <div className="container">
           <h1>Magic Concepts</h1>
-          <Carousel data={data?.magicConcept} />
+          {/* The ids below are subject to change to data */}
+          <Carousel data={data?.magicConcept} name={"magicConcepts"} />
         </div>
       </section>
       <section id="magicAbilities">
         <div className="container">
           <h1>Magic Abilities</h1>
-          <Carousel data={data?.magicAbilities} />
+          <Carousel data={data?.magicAbilities} name={"magicAbilities"} />
         </div>
       </section>
     </>
