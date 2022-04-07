@@ -17,7 +17,7 @@ export const Carousel = ({ data, name }) => {
     carouselListItem = document.querySelectorAll(".carousel_list_item");
     newIndex = carouselIndex + 1;
 
-    if (carouselIndex < maxAmount - 3) {
+    if (carouselIndex < maxAmount - 1) {
       setCarouselIndex(newIndex);
       carouselListItem.forEach((item, index) => {
         const carouselItemWidth = item.clientWidth;
@@ -78,8 +78,12 @@ export const Carousel = ({ data, name }) => {
         })}
       </ul>
       <div className="carousel_arrows">
-        <button onClick={back}>left</button>
-        <button onClick={next}>right</button>
+        <button onClick={back}>
+          <i className="fa-solid fa-arrow-left"></i>
+        </button>
+        <button onClick={next}>
+          <i className="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
     </>
   );
