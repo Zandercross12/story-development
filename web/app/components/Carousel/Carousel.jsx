@@ -7,7 +7,7 @@ import client from "~/lib/sanity/client";
 
 const builder = imageUrlBuilder(client);
 
-export const Carousel = ({ data, name }) => {
+export const Carousel = ({ data, name, path }) => {
   const maxAmount = data?.length;
   const [carouselIndex, setCarouselIndex] = useState(0);
   let carouselListItem;
@@ -55,7 +55,7 @@ export const Carousel = ({ data, name }) => {
           return (
             <li className={`carousel_list_item ${name}`} key={index}>
               <div className="carousel_list_item_style">
-                <Link to="#">
+                <Link to={`${path}${item?.slug.current}`}>
                   <div className="carousel_image_container">
                     {!item.image ? (
                       <img src="/file-solid.svg" alt="carouselImage" />

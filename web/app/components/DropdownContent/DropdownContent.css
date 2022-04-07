@@ -1,0 +1,11 @@
+.dropdown_content_item {
+  background-color: var(--bg-light-gray);
+  border-bottom: 0.5px solid var(--bg-primary);
+  border-radius: 3px;
+  border-top: 0.5px solid var(--bg-primary);
+  padding: 20px;
+}
+
+.dropdown_content_text {
+  margin-top: 10px;
+}
