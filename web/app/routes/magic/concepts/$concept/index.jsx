@@ -10,7 +10,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import DropdownContent from "~/components/DropdownContent/DropdownContent";
 // styles
 import styles from "~/components/DropdownContent/DropdownContent.css";
-import styles2 from "./concept.css";
+import styles2 from "~/styles/concept.css";
 
 const builder = imageUrlBuilder(client);
 
