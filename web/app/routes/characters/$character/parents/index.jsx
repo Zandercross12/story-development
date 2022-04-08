@@ -47,6 +47,7 @@ export const Parents = () => {
       <section>
         <div className="container">
           <h1>Parents</h1>
+          <div className="separator"></div>
           <ul>
             {character?.parents.map((parent) => {
               i++;
@@ -75,7 +76,7 @@ export const Parents = () => {
                   >
                     Read More
                   </Link>
-                  <br />
+                  <div className="separator"></div>
                 </li>
               );
             })}

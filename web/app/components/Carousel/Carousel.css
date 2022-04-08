@@ -1,0 +1,100 @@
+.carousel_list {
+  background: var(--bg-light-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.carousel_list_item {
+  display: flex;
+  flex-basis: 33.333%;
+  justify-content: center;
+  min-width: 11.78rem;
+  padding: 20px;
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.carousel_list_item_style {
+  border: 3px solid var(--bg-gray);
+  border-radius: 10px;
+  transition: 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.carousel_list_item_style a {
+  display: block;
+  height: 270px;
+  padding: 20px;
+  width: 100%;
+}
+
+.carousel_list_item_style:hover {
+  background-color: var(--bg-gray-hover);
+}
+
+.carousel_image_container {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.carousel_image_container img {
+  object-position: center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel_card_description {
+  position: relative;
+  height: 2rem;
+  line-height: 1rem;
+  overflow-y: hidden;
+}
+
+.carousel_item_read_more {
+  color: var(--bg-primary);
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.carousel_arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel_arrows button {
+  background-color: var(--bg-light-gray);
+  border: solid 2px var(--bg-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  margin: 10px 20px;
+  padding: 5px;
+  transition: 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 60px;
+}
+
+.carousel_arrows button:hover {
+  background-color: var(--bg-gray-hover);
+}
+
+@media screen and (min-width: 400px) {
+  .carousel_list {
+    padding: 20px;
+  }
+
+  .carousel_list_item {
+    min-width: 14.78rem;
+  }
+
+  .carousel_card_description {
+    height: 4rem;
+  }
+}

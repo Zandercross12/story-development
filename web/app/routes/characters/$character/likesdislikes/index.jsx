@@ -44,9 +44,11 @@ export const LikesDislikes = () => {
           <h2>Likes:</h2>
           <br />
           <p>
-            {character?.likes.map((likedItem) => {
-              return <span className="comma_list">{likedItem}</span>;
-            })}
+            {character?.likes
+              ? character?.likes?.map((likedItem) => {
+                  return <span className="comma_list">{likedItem}</span>;
+                })
+              : "None"}
           </p>
         </div>
       </section>
@@ -55,9 +57,11 @@ export const LikesDislikes = () => {
           <h2>Dislikes:</h2>
           <br />
           <p>
-            {character?.dislikes.map((dislikedItem) => {
-              return <span className="comma_list">{dislikedItem}</span>;
-            })}
+            {character?.dislikes
+              ? character?.dislikes?.map((dislikedItem) => {
+                  return <span className="comma_list">{dislikedItem}</span>;
+                })
+              : "None"}
           </p>
         </div>
       </section>
