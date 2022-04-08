@@ -1,5 +1,5 @@
 // react | remix
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "remix";
 // third-party
 import imageUrlBuilder from "@sanity/image-url";
@@ -19,7 +19,7 @@ export const Carousel = ({ data, name, path }) => {
 
     if (carouselIndex < maxAmount - 1) {
       setCarouselIndex(newIndex);
-      carouselListItem.forEach((item, index) => {
+      carouselListItem.forEach((item) => {
         const carouselItemWidth = item.clientWidth;
         const newTransformValue = 0 - carouselItemWidth * newIndex;
 
@@ -36,7 +36,7 @@ export const Carousel = ({ data, name, path }) => {
 
     if (carouselIndex > 0) {
       setCarouselIndex(newIndex);
-      carouselListItem.forEach((item, index) => {
+      carouselListItem.forEach((item) => {
         const carouselItemWidth = item.clientWidth;
         const newTransformValue =
           0 - carouselItemWidth * carouselIndex + carouselItemWidth;
@@ -61,7 +61,7 @@ export const Carousel = ({ data, name, path }) => {
                       <img src="/file-solid.svg" alt="carouselImage" />
                     ) : (
                       <img
-                        src={builder.image(item?.image)}
+                        src={builder.image(item.image).url()}
                         alt="carouselImage"
                       />
                     )}
@@ -81,6 +81,7 @@ export const Carousel = ({ data, name, path }) => {
         <button onClick={back}>
           <i className="fa-solid fa-arrow-left"></i>
         </button>
+        {/* TODO Future Browse Button? */}
         <button onClick={next}>
           <i className="fa-solid fa-arrow-right"></i>
         </button>

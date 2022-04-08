@@ -1,0 +1,9 @@
+.concept_image_container {
+    height: 400px;
+    width: 100%;
+}
+
+.concept_image_container img {
+    height: 100%;
+    width: 100%;
+}
