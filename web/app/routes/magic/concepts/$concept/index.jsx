@@ -1,5 +1,5 @@
 // react | remix
-import { useLoaderData, Link } from "remix";
+import { useLoaderData } from "remix";
 // sanity client
 import client from "~/lib/sanity/client";
 // third-party

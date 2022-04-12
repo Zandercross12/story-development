@@ -7,6 +7,18 @@ import groq from "groq";
 import imageUrlBuilder from "@sanity/image-url";
 // components
 // styles
+import styles from "~/styles/ability.css";
+
+const builder = imageUrlBuilder(client);
+
+export const links = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+};
 
 export const loader = async (context) => {
   const slug = context.params.ability;
@@ -27,6 +39,20 @@ export const Ability = () => {
 
   return (
     <>
+      <section>
+        <div className="container">
+          <div className="ability_image_container">
+            {ability?.image ? (
+              <img
+                src={builder.image(ability.image).url()}
+                alt="abilityImage"
+              />
+            ) : (
+              <img src="/file-solid.svg" alt="abilityImage" />
+            )}
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <h1>{ability?.name}</h1>
