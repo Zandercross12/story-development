@@ -56,7 +56,7 @@ export const Ability = () => {
       <section>
         <div className="container">
           <h1>{ability?.name}</h1>
-          <p>{ability?.description}</p>
+          <p>{ability?.description || "No Description"}</p>
         </div>
       </section>
       <section>
@@ -70,7 +70,7 @@ export const Ability = () => {
                   <br />
                 </div>
               );
-            })}
+            }) || "No Action"}
           </p>
         </div>
       </section>
