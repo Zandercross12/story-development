@@ -12,12 +12,15 @@ export const loader = async () => {
   const page = await client.fetch(groq`*[_type == "pages" && name == "Story"]`);
 
   const mainTimeline = await client.fetch(
-    groq`*[_type == "timeline" && name == "Main Timeline"]`
+    groq`*[_type == "timeline" && name == "Story Timeline [ALL]"][0]`
   );
+
+  const events = await client.fetch(groq`*[_type == "story"]`);
 
   return {
     page,
     mainTimeline,
+    events,
   };
 };
 
@@ -32,9 +35,9 @@ export const Story = () => {
         </div>
       </section>
       <section id="timeline">
-        <div class="container">
-          <h1>Timeline</h1>
-          <Timeline data={data.mainTimeline} />
+        <div className="container">
+          <h1>{data?.mainTimeline?.name}</h1>
+          <Timeline timeline={data.mainTimeline} events={data.events} />
         </div>
       </section>
     </>
