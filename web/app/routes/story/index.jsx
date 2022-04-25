@@ -7,6 +7,17 @@ import groq from "groq";
 // components
 import TextComponent from "~/components/TextComponent/TextComponent";
 import Timeline from "~/components/Timeline/Timeline";
+// style
+import styles from "~/components/Timeline/Timeline.css";
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+}
 
 export const loader = async () => {
   const page = await client.fetch(groq`*[_type == "pages" && name == "Story"]`);
