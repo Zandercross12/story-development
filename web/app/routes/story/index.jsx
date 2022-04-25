@@ -37,7 +37,11 @@ export const Story = () => {
       <section id="timeline">
         <div className="container">
           <h1>{data?.mainTimeline?.name}</h1>
-          <Timeline timeline={data?.mainTimeline} events={data?.events} />
+          <Timeline
+            timeline={data?.mainTimeline}
+            name={"mainTimeline"}
+            events={data?.events}
+          />
         </div>
       </section>
     </>
