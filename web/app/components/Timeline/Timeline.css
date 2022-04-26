@@ -1,3 +1,19 @@
+.timeline_preview_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.timeline_preview {
+  background-color: var(--bg-light-gray);
+  border-radius: 4px;
+  height: 400px;
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+
 .timeline_list {
   display: flex;
   flex-wrap: wrap;
@@ -13,12 +29,13 @@
   cursor: pointer;
 }
 
-.timeline_list_item button:hover {
+.timeline_list_item button:hover,
+.timeline_button_selected {
   color: rgb(0, 183, 255);
 }
 
 .timeline_list_item i {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 .timeline_arrows {
