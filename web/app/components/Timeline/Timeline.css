@@ -8,14 +8,16 @@
 .timeline_preview {
   background-color: var(--bg-light-gray);
   border-radius: 4px;
-  height: 400px;
+  min-height: 400px;
+  overflow-y: hidden;
+  padding: 30px;
   text-align: center;
   width: 100%;
-  padding: 30px;
 }
 
 .timeline_image_container {
   height: 200px;
+  margin-bottom: 15px;
 }
 
 .timeline_image_container img {
