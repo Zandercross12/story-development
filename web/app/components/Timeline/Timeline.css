@@ -14,6 +14,17 @@
   padding: 30px;
 }
 
+.timeline_image_container {
+  height: 200px;
+}
+
+.timeline_image_container img {
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
 .timeline_list {
   display: flex;
   flex-wrap: wrap;

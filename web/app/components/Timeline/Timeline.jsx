@@ -1,6 +1,18 @@
 // react | remix
 import React, { useState } from "react";
 
+const Dates = ({ preview }) => {
+  if (preview?.startDate && preview?.endDate) {
+    return (
+      <>
+        {preview?.startDate} - {preview?.endDate}
+      </>
+    );
+  } else {
+    return <>{preview?.startDate || preview?.endDate}</>;
+  }
+};
+
 export const Timeline = ({ timeline, events, name }) => {
   const [preview, setPreview] = useState(undefined);
 
@@ -14,28 +26,34 @@ export const Timeline = ({ timeline, events, name }) => {
         <div className="timeline_preview">
           {preview ? (
             <>
+              <div class="timeline_image_container">
+                <img
+                  src="https://dummyimage.com/700x200.jpg"
+                  alt="placeholderImage"
+                />
+              </div>
               <h1>{preview?.name}</h1>
               <h5>
-                {preview?.startDate && preview?.endDate ? (
-                  <>
-                    {preview?.startDate} - {preview?.endDate}
-                  </>
-                ) : (
-                  <>{preview?.startDate || preview?.endDate}</>
-                )}
+                <Dates preview={preview} />
               </h5>
               <br />
               <p>{preview?.description}</p>
             </>
           ) : (
-            <h1>Select a timeline dot</h1>
+            <>
+              <h1>Nothing Selected</h1>
+              <p>Select a timeline point down below</p>
+              <br />
+              <i className="fa-solid fa-circle-dot"></i>
+              <p>^</p>
+            </>
           )}
         </div>
       </div>
       <ul className="timeline_list">
         {timeline?.events.map((item, index) => {
           const itemEvent = events.find((event) => event?._id === item?._ref);
-          console.log(itemEvent);
+          // TODO: Add images to sanity events
           return (
             <li className={`timeline_list_item ${name}`} key={index}>
               {index === 0 && <i className="fa-solid fa-minus"></i>}
