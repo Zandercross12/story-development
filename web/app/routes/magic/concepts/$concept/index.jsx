@@ -39,6 +39,14 @@ export const loader = async (context) => {
   };
 };
 
+export const meta = ({ data }) => {
+  console.log(data);
+
+  return {
+    title: `Magic Concept - ${"text"}`,
+  };
+};
+
 export const Concept = () => {
   const data = useLoaderData();
 

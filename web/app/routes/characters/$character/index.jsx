@@ -30,6 +30,13 @@ export const loader = async (context) => {
   };
 };
 
+export const meta = ({ data }) => {
+  const { character } = data;
+  return {
+    title: `Character - ${character[0].name || "N/A"}`,
+  };
+};
+
 const builder = imageUrlBuilder(client);
 
 export const Character = () => {

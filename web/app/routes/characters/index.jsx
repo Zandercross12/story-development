@@ -32,6 +32,12 @@ export const loader = async () => {
   };
 };
 
+export const meta = () => {
+  return {
+    title: "Characters",
+  };
+};
+
 export default function Characters() {
   const data = useLoaderData();
 

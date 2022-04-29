@@ -11,10 +11,6 @@ import { Navbar } from "~/components/Navbar/Navbar";
 // styles
 import styles from "~/styles/main.css";
 
-export function meta() {
-  return { title: "Home" };
-}
-
 export function links() {
   return [
     {
@@ -32,7 +28,7 @@ export default function App() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <script
           src="https://kit.fontawesome.com/e4319753b5.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <Meta />
         <Links />

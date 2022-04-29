@@ -14,6 +14,12 @@ export const loader = async () => {
   return page;
 };
 
+export const meta = () => {
+  return {
+    title: "Story",
+  };
+};
+
 export const Contact = () => {
   const data = useLoaderData();
 
