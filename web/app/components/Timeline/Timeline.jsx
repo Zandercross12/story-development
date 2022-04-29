@@ -1,5 +1,6 @@
 // react | remix
 import React, { useState } from "react";
+import { Link } from "remix";
 
 const Dates = ({ preview }) => {
   if (preview?.startDate && preview?.endDate) {
@@ -38,6 +39,13 @@ export const Timeline = ({ timeline, events, name }) => {
               </h5>
               <br />
               <p>{preview?.description}</p>
+              <br />
+              <Link
+                className="timeline_learn_more"
+                to={`/story/${preview?.slug.current}`}
+              >
+                Learn More
+              </Link>
             </>
           ) : (
             <>

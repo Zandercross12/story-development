@@ -27,6 +27,19 @@
   width: 100%;
 }
 
+.timeline_learn_more {
+  background-color: var(--font-black);
+  border-radius: 100px;
+  color: var(--font-white);
+  padding: 10px;
+  transition: 200ms ease-out background-color, 500ms ease-out border;
+}
+
+.timeline_learn_more:hover {
+  background-color: var(--bg-gray);
+  border: 0.5px solid var(--font-black);
+}
+
 .timeline_list {
   display: flex;
   flex-wrap: wrap;
