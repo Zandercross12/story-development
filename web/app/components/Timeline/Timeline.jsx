@@ -27,7 +27,7 @@ export const Timeline = ({ timeline, events, name }) => {
         <div className="timeline_preview">
           {preview ? (
             <>
-              <div class="timeline_image_container">
+              <div className="timeline_image_container">
                 <img
                   src="https://dummyimage.com/700x200.jpg"
                   alt="placeholderImage"
