@@ -4,6 +4,9 @@ import { useLoaderData } from "remix";
 import client from "~/lib/sanity/client";
 // third-party
 import groq from "groq";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(client);
 
 export const loader = async (context) => {
   const slug = context.params.event;
@@ -31,6 +34,9 @@ export const Event = () => {
 
   return (
     <>
+      <section>
+        <div className="container"></div>
+      </section>
       <section>
         <div className="container">
           <h1>{events[0]?.name || "No Title"}</h1>
