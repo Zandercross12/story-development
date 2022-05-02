@@ -39,7 +39,7 @@ export const LikesDislikes = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Likes/Dislikes</h1>
           <h2>Likes:</h2>
           <br />
@@ -53,7 +53,7 @@ export const LikesDislikes = () => {
         </div>
       </section>
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h2>Dislikes:</h2>
           <br />
           <p>

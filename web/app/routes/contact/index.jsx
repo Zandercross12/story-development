@@ -16,7 +16,7 @@ export const loader = async () => {
 
 export const meta = () => {
   return {
-    title: "Story",
+    title: "Contact",
   };
 };
 

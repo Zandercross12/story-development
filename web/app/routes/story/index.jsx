@@ -35,6 +35,12 @@ export const loader = async () => {
   };
 };
 
+export const meta = () => {
+  return {
+    title: "Story",
+  };
+};
+
 export const Story = () => {
   const data = useLoaderData();
 

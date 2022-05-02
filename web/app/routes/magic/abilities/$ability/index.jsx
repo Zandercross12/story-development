@@ -32,6 +32,13 @@ export const loader = async (context) => {
   };
 };
 
+export const meta = ({ data }) => {
+  const { magicAbility } = data;
+  return {
+    title: `Magic Ability - ${magicAbility[0]?.name || "ERROR"}`,
+  };
+};
+
 export const Ability = () => {
   const data = useLoaderData();
 
@@ -55,7 +62,7 @@ export const Ability = () => {
       </section>
       <section>
         <div className="container">
-          <h1>{ability?.name}</h1>
+          <h1>{ability?.name || "No Title"}</h1>
           <p>{ability?.description || "No Description"}</p>
         </div>
       </section>
@@ -65,10 +72,10 @@ export const Ability = () => {
           <p>
             {ability?.action?.map((actionItem, index) => {
               return (
-                <div key={index}>
+                <span key={index}>
                   {actionItem.children[0].text}
                   <br />
-                </div>
+                </span>
               );
             }) || "No Action"}
           </p>

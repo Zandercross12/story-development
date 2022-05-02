@@ -45,7 +45,7 @@ export const Abilities = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Abilities</h1>
           <ul>
             {character?.abilities.map((ability) => {

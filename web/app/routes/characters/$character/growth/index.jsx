@@ -41,7 +41,7 @@ export const Growth = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Character Growth</h1>
           <p>
             {character?.growth.map((growthItem) => {

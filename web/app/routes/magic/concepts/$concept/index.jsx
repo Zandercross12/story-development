@@ -40,10 +40,9 @@ export const loader = async (context) => {
 };
 
 export const meta = ({ data }) => {
-  console.log(data);
-
+  const { magicConcept } = data;
   return {
-    title: `Magic Concept - ${"text"}`,
+    title: `Magic Concept - ${magicConcept[0]?.name || "ERROR"}`,
   };
 };
 
