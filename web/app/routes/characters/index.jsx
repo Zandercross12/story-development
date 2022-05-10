@@ -26,7 +26,7 @@ export const loader = async () => {
 
   const characters = await client.fetch(groq`*[_type == "characters"]`);
 
-  if (page === {} || characters === {}) {
+  if (page[0].length === 0 || characters[0].length === 0) {
     throw new Response("Not Found", {
       status: 404,
     });
