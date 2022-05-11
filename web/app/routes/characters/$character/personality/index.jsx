@@ -41,13 +41,14 @@ export const Personality = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Personality</h1>
           <p>
             {character?.personality.map((personalityText) => {
               return (
                 <span key={i}>
                   {personalityText.children[0].text}
+                  <br />
                   <br />
                 </span>
               );

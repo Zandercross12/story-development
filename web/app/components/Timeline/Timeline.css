@@ -1,0 +1,87 @@
+.timeline_preview_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.timeline_preview {
+  background-color: var(--bg-light-gray);
+  border-radius: 4px;
+  min-height: 400px;
+  overflow-y: hidden;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.timeline_image_container {
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.timeline_image_container img {
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.timeline_learn_more {
+  background-color: var(--font-black);
+  border-radius: 100px;
+  color: var(--font-white);
+  padding: 10px;
+  transition: 200ms ease-out background-color, 500ms ease-out border;
+}
+
+.timeline_learn_more:hover {
+  background-color: var(--bg-gray);
+  border: 0.5px solid var(--font-black);
+}
+
+.timeline_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timeline_list_item {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline_list_item button {
+  cursor: pointer;
+}
+
+.timeline_list_item button:hover,
+.timeline_button_selected {
+  color: rgb(0, 183, 255);
+}
+
+.timeline_list_item i {
+  font-size: 1.4rem;
+}
+
+.timeline_arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.timeline_arrows button {
+  background-color: var(--bg-light-gray);
+  border: solid 2px var(--bg-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  margin: 10px 20px;
+  padding: 5px;
+  transition: 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 60px;
+}
+
+.timeline_arrows button:hover {
+  background-color: var(--bg-gray-hover);
+}

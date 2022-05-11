@@ -31,6 +31,12 @@ export const loader = async () => {
   };
 };
 
+export const meta = () => {
+  return {
+    title: "Magic",
+  };
+};
+
 export const Magic = () => {
   const data = useLoaderData();
   return (

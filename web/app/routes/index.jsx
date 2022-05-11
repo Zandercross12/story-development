@@ -13,6 +13,12 @@ export const loader = async () => {
   return page;
 };
 
+export const meta = () => {
+  return {
+    title: "Home",
+  };
+};
+
 export default function Index() {
   const data = useLoaderData();
 

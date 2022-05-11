@@ -39,7 +39,7 @@ export const Backstory = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Backstory</h1>
           <p>
             {character?.backstory.map((backstoryText) => {

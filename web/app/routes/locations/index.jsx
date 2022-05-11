@@ -17,6 +17,12 @@ export const links = () => [
   },
 ];
 
+export const meta = () => {
+  return {
+    title: "Locations",
+  };
+};
+
 export const loader = async () => {
   const page = await client.fetch(
     groq`*[_type == "pages" && name == "Locations"]`

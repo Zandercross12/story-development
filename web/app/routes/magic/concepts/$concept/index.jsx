@@ -1,5 +1,5 @@
 // react | remix
-import { useLoaderData, Link } from "remix";
+import { useLoaderData } from "remix";
 // sanity client
 import client from "~/lib/sanity/client";
 // third-party
@@ -36,6 +36,13 @@ export const loader = async (context) => {
 
   return {
     magicConcept,
+  };
+};
+
+export const meta = ({ data }) => {
+  const { magicConcept } = data;
+  return {
+    title: `Magic Concept - ${magicConcept[0]?.name || "ERROR"}`,
   };
 };
 

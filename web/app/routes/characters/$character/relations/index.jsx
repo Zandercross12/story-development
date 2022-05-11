@@ -44,9 +44,8 @@ export const relations = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Relations</h1>
-          <div className="separator"></div>
           <ul>
             {character?.relations.map((relation) => {
               i++;
@@ -63,6 +62,7 @@ export const relations = () => {
 
               return (
                 <li key={i}>
+                  <div className="separator"></div>
                   <br />
                   <h2>{relationRef?.name}</h2>
                   <br />
@@ -79,7 +79,6 @@ export const relations = () => {
                   >
                     Read More
                   </Link>
-                  <div className="separator"></div>
                 </li>
               );
             })}

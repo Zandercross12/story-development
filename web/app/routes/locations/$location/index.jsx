@@ -31,6 +31,13 @@ export const loader = async (context) => {
   };
 };
 
+export const meta = ({ data }) => {
+  const { location } = data;
+  return {
+    title: `Location - ${location[0].name || "N/A"}`,
+  };
+};
+
 export const Location = () => {
   const data = useLoaderData();
 

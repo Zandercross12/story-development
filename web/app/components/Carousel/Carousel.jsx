@@ -51,31 +51,33 @@ export const Carousel = ({ data, name, path }) => {
   return (
     <>
       <ul className="carousel_list">
-        {data.map((item, index) => {
-          return (
-            <li className={`carousel_list_item ${name}`} key={index}>
-              <div className="carousel_list_item_style">
-                <Link to={`${path}${item?.slug.current}`}>
-                  <div className="carousel_image_container">
-                    {!item.image ? (
-                      <img src="/file-solid.svg" alt="carouselImage" />
-                    ) : (
-                      <img
-                        src={builder.image(item.image).url()}
-                        alt="carouselImage"
-                      />
-                    )}
+        {data?.length !== 0
+          ? data.map((item, index) => {
+              return (
+                <li className={`carousel_list_item ${name}`} key={index}>
+                  <div className="carousel_list_item_style">
+                    <Link to={`${path}${item?.slug.current}`}>
+                      <div className="carousel_image_container">
+                        {!item.image ? (
+                          <img src="/file-solid.svg" alt="carouselImage" />
+                        ) : (
+                          <img
+                            src={builder.image(item.image).url()}
+                            alt="carouselImage"
+                          />
+                        )}
+                      </div>
+                      <h2>{item?.name}</h2>
+                      <p className="carousel_card_description">
+                        {item?.description}
+                      </p>
+                      <div className="carousel_item_read_more">Read More</div>
+                    </Link>
                   </div>
-                  <h2>{item?.name}</h2>
-                  <p className="carousel_card_description">
-                    {item?.description}
-                  </p>
-                  <div className="carousel_item_read_more">Read More</div>
-                </Link>
-              </div>
-            </li>
-          );
-        })}
+                </li>
+              );
+            })
+          : "There are no items to display"}
       </ul>
       <div className="carousel_arrows">
         <button onClick={back}>

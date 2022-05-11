@@ -45,9 +45,8 @@ export const Parents = () => {
     <>
       <CharacterSidebar character={character} />
       <section>
-        <div className="container">
+        <div className="container_sidebar">
           <h1>Parents</h1>
-          <div className="separator"></div>
           <ul>
             {character?.parents.map((parent) => {
               i++;
@@ -64,6 +63,7 @@ export const Parents = () => {
 
               return (
                 <li key={i}>
+                  <div className="separator"></div>
                   <br />
                   <h2>{parentRef?.name}</h2>
                   <br />
@@ -76,7 +76,6 @@ export const Parents = () => {
                   >
                     Read More
                   </Link>
-                  <div className="separator"></div>
                 </li>
               );
             })}
