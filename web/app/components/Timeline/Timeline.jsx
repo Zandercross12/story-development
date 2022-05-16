@@ -90,6 +90,7 @@ export const Timeline = ({ timeline, events, name }) => {
           <i className="fa-solid fa-arrow-left"></i>
         </button>
         {/* TODO Future Browse Button? */}
+        {/* TODO 10 max displayed  */}
         <button onClick={next}>
           <i className="fa-solid fa-arrow-right"></i>
         </button>
