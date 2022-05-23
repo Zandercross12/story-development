@@ -3,7 +3,7 @@ export const TextComponent = ({ data }) => {
   return (
     <>
       <h1>{data[0]?.name}</h1>
-      {data[0].content.map((children) => {
+      {data[0]?.content.map((children) => {
         i++;
         return (
           <p key={i}>
@@ -11,7 +11,16 @@ export const TextComponent = ({ data }) => {
             <br />
           </p>
         );
-      })}
+      }) ||
+        data?.idea.map((children) => {
+          i++;
+          return (
+            <p key={i}>
+              {children.children[0].text}
+              <br />
+            </p>
+          );
+        })}
     </>
   );
 };

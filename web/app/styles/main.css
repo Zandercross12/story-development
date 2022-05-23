@@ -69,6 +69,14 @@ ul {
   text-decoration: underline;
 }
 
+.blue_link {
+  color: #0085c2;
+}
+
+.blue_link:hover {
+  color: #005177;
+}
+
 /* Navbar */
 
 .dark_background {

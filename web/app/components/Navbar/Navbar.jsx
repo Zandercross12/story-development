@@ -71,6 +71,16 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav_list_item">
+            <NavLink to="/worldbuilding">
+              <i className="fa-solid fa-earth-americas"></i> World Building
+            </NavLink>
+          </li>
+          <li className="nav_list_item">
+            <NavLink to="/ideas">
+              <i class="fa-solid fa-lightbulb"></i> Ideas
+            </NavLink>
+          </li>
+          <li className="nav_list_item">
             <NavLink to="/about">
               <i className="fa-solid fa-address-card"></i> About
             </NavLink>

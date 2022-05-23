@@ -55,7 +55,7 @@ export const LocationEvents = ({ location, stories }) => {
         return (
           <li className="event_item" key={i}>
             <Link
-              to={`/story/events/${eventRef?.slug.current}`}
+              to={`/story/${eventRef?.slug.current}`}
               className="location_events_list"
             >
               <div className="event_content">

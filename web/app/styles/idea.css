@@ -1,0 +1,16 @@
+.approved,
+.unapproved {
+  border: 1px solid var(--bg-primary-dark);
+  border-radius: 5px;
+  color: white;
+  display: inline;
+  padding: 3px;
+}
+
+.approved {
+  background-color: green;
+}
+
+.unapproved {
+  background-color: red;
+}

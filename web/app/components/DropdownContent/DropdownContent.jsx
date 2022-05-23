@@ -8,6 +8,7 @@ export const DropdownContent = ({ item }) => {
   };
 
   let i = 0;
+
   return (
     <button onClick={toggle} className="dropdown_button">
       <div className="dropdown_content_item">
@@ -17,10 +18,10 @@ export const DropdownContent = ({ item }) => {
           ) : (
             <i className="fa-solid fa-arrow-right"></i>
           )}{" "}
-          {item?.categoryName}
+          {item?.categoryName || item?.title}
         </h2>
 
-        {item?.categoryInfo.map((children) => {
+        {item?.categoryInfo?.map((children) => {
           i++;
           return (
             <p
@@ -32,7 +33,20 @@ export const DropdownContent = ({ item }) => {
               {children.children[0].text}
             </p>
           );
-        })}
+        }) ||
+          item?.loreItem?.map((children) => {
+            i++;
+            return (
+              <p
+                className={`dropdown_content_text ${
+                  !isOpen && "dropdown_content_text_hidden"
+                }`}
+                key={i}
+              >
+                {children.children[0].text}
+              </p>
+            );
+          })}
       </div>
     </button>
   );

@@ -47,39 +47,6 @@ export default function App() {
   );
 }
 
-export function ErrorBoundary({ error }) {
-  console.log(error);
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <script
-          src="https://kit.fontawesome.com/e4319753b5.js"
-          crossOrigin="anonymous"
-        ></script>
-        <Meta />
-        <Links />
-      </head>
-
-      <Navbar />
-
-      <body>
-        <section>
-          <div className="container">
-            <h1>Error</h1>
-            <p>
-              Looks like we have run into an error! Check the console for more
-              information.
-            </p>
-            <Scripts />
-          </div>
-        </section>
-      </body>
-    </html>
-  );
-}
-
 export function CatchBoundary() {
   const caught = useCatch();
   <html lang="en">
@@ -100,7 +67,10 @@ export function CatchBoundary() {
       <section>
         <div className="container">
           <h1>{caught.status}</h1>
-          <p>Looks like the page you were searching for does not exist!</p>
+          <p>
+            Looks like we have run into an error! Check the console for more
+            information.
+          </p>
           <br />
           <p>{caught.statusText}</p>
           <Scripts />
@@ -108,4 +78,46 @@ export function CatchBoundary() {
       </section>
     </body>
   </html>;
+}
+
+export function ErrorBoundary({ error }) {
+  console.log(error);
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <script
+          src="https://kit.fontawesome.com/e4319753b5.js"
+          crossOrigin="anonymous"
+        ></script>
+        <Meta />
+        <Links />
+      </head>
+
+      <Navbar />
+
+      <body>
+        <section>
+          <div className="container">
+            <h1>Oops!</h1>
+            <p>
+              Looks like we have run into an error! Check the console for more
+              information.
+            </p>
+            <br />
+            <br />
+            <h3>Error Log:</h3>
+            <br />
+            <p>{error.toString()}</p>
+            <br />
+            <p>
+              <b>For more information, check the console.</b>
+            </p>
+            <Scripts />
+          </div>
+        </section>
+      </body>
+    </html>
+  );
 }

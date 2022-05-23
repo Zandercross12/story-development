@@ -14,22 +14,26 @@ import magic from "./magic";
 import ideas from "./ideas";
 import timeline from "./timeline";
 import worldBuilding from "./worldBuilding";
+import novels from "./novels";
+import volumes from "./volumes";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-    // We name our schema
-    name: "default",
-    // Then proceed to concatenate our document type
-    // to the ones provided by any plugins that are installed
-    types: schemaTypes.concat([
-        pages,
-        characters,
-        locations,
-        story,
-        magicAttacks,
-        magic,
-        ideas,
-        timeline,
-        worldBuilding,
-    ]),
+  // We name our schema
+  name: "default",
+  // Then proceed to concatenate our document type
+  // to the ones provided by any plugins that are installed
+  types: schemaTypes.concat([
+    pages,
+    characters,
+    locations,
+    story,
+    magicAttacks,
+    magic,
+    ideas,
+    timeline,
+    worldBuilding,
+    novels,
+    volumes,
+  ]),
 });
