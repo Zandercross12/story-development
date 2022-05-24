@@ -51,6 +51,11 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav_list_item">
+            <NavLink to="/read">
+              <i className="fa-solid fa-book"></i> Read
+            </NavLink>
+          </li>
+          <li className="nav_list_item">
             <NavLink to="/characters">
               <i className="fa-solid fa-person"></i> Characters
             </NavLink>

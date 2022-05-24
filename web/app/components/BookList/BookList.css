@@ -1,0 +1,27 @@
+.book_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book_item {
+  flex-basis: 33.333%;
+  width: 33.333%;
+}
+
+.book_container {
+  padding: 10px 10px;
+}
+
+.book_item a {
+  width: 100%;
+}
+
+.image_container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image_container img {
+  height: 100%;
+  width: 100%;
+}
