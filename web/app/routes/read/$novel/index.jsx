@@ -5,6 +5,17 @@ import client from "~/lib/sanity/client";
 // third-party
 import groq from "groq";
 // components
+// styles
+import styles from "~/styles/novel.css";
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+}
 
 export const loader = async (context) => {
   const slug = context.params.novel;
@@ -57,14 +68,18 @@ export const Novel = () => {
         <div className="container">
           <h3>Completion Status:</h3>
           <br />
-          <p>{`${novel?.completed}`}</p>
+          <p className={`completed_status completed_${novel?.completed}`}>
+            <span>{`${novel?.completed}`}</span>
+          </p>
         </div>
       </section>
       <section id="read">
         <div className="container">
           <h3>Read</h3>
           <br />
-          <Link to="test">Click Me to Read</Link>
+          <Link className="read_button" to="read">
+            <span>Click Me to Read</span>
+          </Link>
         </div>
       </section>
     </>

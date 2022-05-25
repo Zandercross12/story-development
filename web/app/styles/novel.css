@@ -1,0 +1,38 @@
+.completed_status {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.completed_status span {
+  border: solid 1px var(--bg-primary-dark);
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: 300ms ease-out background-color, 300ms ease-out color;
+}
+
+.completed_true span {
+  background-color: green;
+}
+
+.completed_false span {
+  background-color: red;
+}
+
+.read_button {
+  display: flex;
+  justify-content: center;
+}
+
+.read_button span {
+  border: solid 1px var(--bg-primary-dark);
+  border-radius: 10px;
+  padding: 10px;
+  transition: 300ms ease-out background-color, 300ms ease-out color;
+}
+
+.read_button span:hover {
+  background-color: var(--bg-primary-dark);
+  color: var(--bg-white);
+}
