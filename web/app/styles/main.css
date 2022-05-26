@@ -77,6 +77,14 @@ ul {
   color: #005177;
 }
 
+.indent_list {
+  margin-left: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Navbar */
 
 .dark_background {

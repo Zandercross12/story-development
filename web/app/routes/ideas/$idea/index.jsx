@@ -34,8 +34,6 @@ export const Idea = () => {
   const data = useLoaderData();
   const idea = data.idea[0];
 
-  console.log(idea);
-
   const approved = idea?.approved ? "approved" : "unapproved";
 
   return (

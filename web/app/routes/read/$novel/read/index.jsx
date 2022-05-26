@@ -7,8 +7,18 @@ import groq from "groq";
 import imageUrlBuilder from "@sanity/image-url";
 // components
 // styles
+import styles from "~/styles/read.css";
 
 const builder = imageUrlBuilder(client);
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+}
 
 export const loader = async ({ params }) => {
   const slug = params.novel;
@@ -40,6 +50,17 @@ export const Read = () => {
   const novels = data?.novels;
   const volumes = data?.volumes.reverse();
 
+  function toggleContent(parent) {
+    const target = parent?.target;
+    const targetId = target?.id;
+
+    const query = `.${targetId}`;
+
+    const targetContent = document.querySelector(query);
+
+    targetContent.classList.toggle("hidden");
+  }
+
   return (
     <section id="read">
       <div className="container">
@@ -54,10 +75,33 @@ export const Read = () => {
             return (
               <li>
                 -{" "}
-                <button className="blue_link">
+                <button
+                  id={volume.slug.current}
+                  onClick={toggleContent}
+                  className="blue_link volume"
+                >
                   {volume?.name} - {date} -{" "}
                   {volume.published ? "Finished" : "Unfinished"}
                 </button>
+                <ul className={`hidden ${volume.slug.current}`}>
+                  {volume?.content.map((contentItem) => {
+                    return (
+                      <li className="indent_list">
+                        -{" "}
+                        <Link
+                          className="part_link"
+                          to={
+                            volume?.slug.current +
+                            "/" +
+                            contentItem?.partslug.current
+                          }
+                        >
+                          {contentItem?.partname}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </li>
             );
           })}

@@ -66,6 +66,27 @@ export default {
               type: "string",
             },
             {
+              name: "partslug",
+              title: "Part Name Slug",
+              description: "Copy of Part Name",
+              type: "slug",
+              options: {
+                source: (doc, options) => {
+                  const convert = options.parent.partname;
+                  const regex = /\?+/g;
+
+                  let converted = convert;
+
+                  if (convert.match(regex)) {
+                    converted = convert.replace(regex, "question-mark");
+                  }
+
+                  return converted;
+                },
+                maxLength: 96,
+              },
+            },
+            {
               name: "part",
               title: "Part",
               type: "array",

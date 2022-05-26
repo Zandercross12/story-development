@@ -37,8 +37,6 @@ export const Novel = () => {
   const data = useLoaderData();
   const novel = data?.novel[0];
 
-  console.log(novel);
-
   return (
     <>
       {/* Insert Cover Image Here */}

@@ -7,7 +7,6 @@ import client from "~/lib/sanity/client";
 const builder = imageUrlBuilder(client);
 
 export const BookList = ({ data }) => {
-  console.log(data);
   return (
     <>
       <ul className="book_list">
