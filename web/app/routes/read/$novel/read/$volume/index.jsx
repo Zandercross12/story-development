@@ -32,11 +32,28 @@ export const Volume = () => {
 
   const volumes = data?.volumes;
 
-  console.log(volumes);
   return (
     <section id="volume">
       <div className="container">
-        <h1>Read {volumes?.name}</h1>
+        <h1>{volumes?.name}</h1>
+        <p>
+          <strong>Author's Opinion:</strong> {volumes?.opinion}
+        </p>
+        <br />
+        <h3>Part List</h3>
+        <br />
+        {volumes?.content.map((content) => {
+          return (
+            <div className="content" key={content._key}>
+              <h4>
+                -{" "}
+                <Link className="blue_link" to={content.partslug.current}>
+                  {content.partname}
+                </Link>
+              </h4>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
