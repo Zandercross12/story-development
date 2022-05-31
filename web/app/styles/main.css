@@ -34,6 +34,10 @@ button {
   border: none;
 }
 
+.container {
+  margin: 0px 5px;
+}
+
 section:not(:last-of-type) .container {
   border-bottom: 1px solid var(--bg-light-gray);
   margin-bottom: 0;
@@ -83,6 +87,10 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.gray {
+  color: #a2a2a2;
 }
 
 /* Navbar */
@@ -159,6 +167,28 @@ nav {
 
 .nav_list_item a:hover {
   background-color: var(--bg-light-gray);
+}
+
+.back_button {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--font-black);
+  border-radius: 50px;
+  bottom: 20px;
+  color: white;
+  cursor: pointer;
+  left: 20px;
+  padding: 10px;
+  position: fixed;
+  transition: 200ms ease-out background-color, 200ms ease-out color;
+}
+
+.back_button:hover {
+  background-color: var(--bg-white);
+  color: var(--font-black);
+}
+
+.center {
+  text-align: center;
 }
 
 @media screen and (min-width: 320px) {

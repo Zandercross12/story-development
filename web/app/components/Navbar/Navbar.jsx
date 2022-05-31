@@ -1,4 +1,5 @@
 import { NavLink } from "remix";
+import Backbutton from "~/components/Backbutton/Backbutton";
 
 export const Navbar = () => {
   const toggleNav = () => {
@@ -82,7 +83,7 @@ export const Navbar = () => {
           </li>
           <li className="nav_list_item">
             <NavLink to="/ideas">
-              <i class="fa-solid fa-lightbulb"></i> Ideas
+              <i className="fa-solid fa-lightbulb"></i> Ideas
             </NavLink>
           </li>
           <li className="nav_list_item">
@@ -97,6 +98,7 @@ export const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <Backbutton />
     </header>
   );
 };

@@ -4,6 +4,8 @@ import { useLoaderData } from "remix";
 import client from "~/lib/sanity/client";
 // third-party
 import groq from "groq";
+// components
+import Pagination from "~/components/Pagination/Pagination";
 
 export const loader = async ({ params }) => {
   const slug = params.volume;
@@ -17,9 +19,10 @@ export const loader = async ({ params }) => {
   return { volume, partname };
 };
 
-export const meta = () => {
+export const meta = ({ data }) => {
+  const volume = data?.volume;
   return {
-    title: "Read",
+    title: `${volume?.name}`,
   };
 };
 
@@ -30,10 +33,9 @@ export const Content = () => {
   const partname = data?.partname;
 
   const content = volume?.content.find(
-    (content) => content.partslug.current === partname
+    (contentItem) => contentItem.partslug.current === partname
   );
 
-  console.log(content);
   return (
     <section id="content">
       <div className="container">
@@ -71,6 +73,7 @@ export const Content = () => {
             </>
           );
         })}
+        <Pagination volume={volume} partname={partname} />
       </div>
     </section>
   );
