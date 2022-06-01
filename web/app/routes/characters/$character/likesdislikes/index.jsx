@@ -45,8 +45,12 @@ export const LikesDislikes = () => {
           <br />
           <p>
             {character?.likes
-              ? character?.likes?.map((likedItem) => {
-                  return <span className="comma_list">{likedItem}</span>;
+              ? character?.likes?.map((likedItem, index) => {
+                  return (
+                    <span key={index} className="comma_list">
+                      {likedItem}
+                    </span>
+                  );
                 })
               : "None"}
           </p>

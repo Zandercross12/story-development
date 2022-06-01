@@ -39,6 +39,7 @@ export const Pagination = ({ volume, partname }) => {
 
   return (
     <div className="center">
+      <br />
       {empty} <br /> <br />
       {prevPageLink} {nextPageLink}
     </div>

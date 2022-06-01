@@ -11,7 +11,7 @@ export const Backbutton = () => {
       }}
       className="back_button"
     >
-      <i class="fa-solid fa-arrow-left-long"></i> Back
+      <i className="fa-solid fa-arrow-left-long"></i> Back
     </button>
   );
 };

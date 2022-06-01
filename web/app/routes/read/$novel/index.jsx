@@ -67,7 +67,7 @@ export const Novel = () => {
           <h3>Completion Status:</h3>
           <br />
           <p className={`completed_status completed_${novel?.completed}`}>
-            <span>{`${novel?.completed}`}</span>
+            <span>{novel?.completed ? "Completed" : "Incomplete"}</span>
           </p>
         </div>
       </section>

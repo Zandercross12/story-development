@@ -44,7 +44,7 @@ export const Locations = () => {
         </div>
       </section>
       <section>
-        <div class="container">
+        <div className="container">
           <h1>Latest Locations</h1>
           <LocationPreview data={data.locations} />
         </div>

@@ -9,6 +9,10 @@ export const CharacterSidebar = ({ character }) => {
 
         let keyName = key;
 
+        if (character[key] === null || character[key].length === 0) {
+          return;
+        }
+
         switch (keyName) {
           case "_createdAt":
           case "_id":

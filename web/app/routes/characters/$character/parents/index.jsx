@@ -48,7 +48,7 @@ export const Parents = () => {
         <div className="container_sidebar">
           <h1>Parents</h1>
           <ul>
-            {character?.parents.map((parent) => {
+            {character?.parents?.map((parent) => {
               i++;
 
               const parentReferenceId = parent?._ref;
