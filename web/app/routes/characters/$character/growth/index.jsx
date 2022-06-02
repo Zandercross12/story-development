@@ -33,6 +33,10 @@ export const loader = async (context) => {
 export const Growth = () => {
   const data = useLoaderData();
 
+  if (!data.character.length > 0) {
+    throw new Error("Character Not Found");
+  }
+
   const character = data.character[0];
 
   let i = 0;

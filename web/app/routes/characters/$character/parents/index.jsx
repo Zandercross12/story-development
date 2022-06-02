@@ -36,8 +36,16 @@ export const loader = async (context) => {
 export const Parents = () => {
   const data = useLoaderData();
 
+  if (!data.character.length > 0) {
+    throw new Error("Character Not Found");
+  }
+
   const character = data.character[0];
   const parentsReference = data.parentsRef;
+
+  if (!character.parents || !character.parents.length > 0) {
+    throw new Error("No Parents Found");
+  }
 
   let i = 0;
 

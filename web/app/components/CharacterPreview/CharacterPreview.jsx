@@ -10,9 +10,9 @@ export const CharacterPreview = ({ data }) => {
   return (
     <div>
       <ul className="character_list">
-        {data.map((character) => {
+        {data.map((character, index) => {
           return (
-            <li className="list_character">
+            <li key={index + "preview"} className="list_character">
               <Link to={`/characters/${character.slug.current}`}>
                 <div className="image_container">
                   {!character.image ? (

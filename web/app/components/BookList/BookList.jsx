@@ -10,9 +10,9 @@ export const BookList = ({ data }) => {
   return (
     <>
       <ul className="book_list">
-        {data.map((book) => {
+        {data.map((book, index) => {
           return (
-            <li className="book_item" key={book.id}>
+            <li className="book_item" key={index + "book"}>
               <div className="book_container">
                 <Link to={`/read/${book.slug.current}`}>
                   <h1>{book?.name}</h1>

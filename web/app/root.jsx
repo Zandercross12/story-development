@@ -59,6 +59,7 @@ export function CatchBoundary() {
       ></script>
       <Meta />
       <Links />
+      <Scripts />
     </head>
 
     <Navbar />
@@ -73,7 +74,6 @@ export function CatchBoundary() {
           </p>
           <br />
           <p>{caught.statusText}</p>
-          <Scripts />
         </div>
       </section>
     </body>
@@ -93,6 +93,7 @@ export function ErrorBoundary({ error }) {
         ></script>
         <Meta />
         <Links />
+        <Scripts />
       </head>
 
       <Navbar />
@@ -102,19 +103,20 @@ export function ErrorBoundary({ error }) {
           <div className="container">
             <h1>Oops!</h1>
             <p>
-              Looks like we have run into an error! Check the console for more
-              information.
+              Looks like we have run into an error! This is either a bug, or
+              this content may no longer exist. You may return to your previous
+              page by hitting the Back button down in the bottom left of the
+              page.
             </p>
             <br />
             <br />
-            <h3>Error Log:</h3>
+            <h3>Error Message:</h3>
             <br />
             <p>{error.toString()}</p>
             <br />
             <p>
               <b>For more information, check the console.</b>
             </p>
-            <Scripts />
           </div>
         </section>
       </body>

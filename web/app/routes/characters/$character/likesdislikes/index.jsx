@@ -33,6 +33,10 @@ export const loader = async (context) => {
 export const LikesDislikes = () => {
   const data = useLoaderData();
 
+  if (!data.character.length > 0) {
+    throw new Error("Character Not Found");
+  }
+
   const character = data.character[0];
 
   return (
@@ -47,7 +51,7 @@ export const LikesDislikes = () => {
             {character?.likes
               ? character?.likes?.map((likedItem, index) => {
                   return (
-                    <span key={index} className="comma_list">
+                    <span key={index + "liked"} className="comma_list">
                       {likedItem}
                     </span>
                   );
@@ -62,8 +66,12 @@ export const LikesDislikes = () => {
           <br />
           <p>
             {character?.dislikes
-              ? character?.dislikes?.map((dislikedItem) => {
-                  return <span className="comma_list">{dislikedItem}</span>;
+              ? character?.dislikes?.map((dislikedItem, index) => {
+                  return (
+                    <span key={index + "disliked"} className="comma_list">
+                      {dislikedItem}
+                    </span>
+                  );
                 })
               : "None"}
           </p>

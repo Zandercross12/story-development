@@ -33,7 +33,15 @@ export const loader = async (context) => {
 export const Personality = () => {
   const data = useLoaderData();
 
+  if (!data.character.length > 0) {
+    throw new Error("Character Not Found");
+  }
+
   const character = data.character[0];
+
+  if (!character.personality || !character.personality.length > 0) {
+    throw new Error("Character Personality Not Found");
+  }
 
   let i = 0;
 

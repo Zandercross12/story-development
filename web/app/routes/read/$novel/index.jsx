@@ -23,18 +23,37 @@ export const loader = async (context) => {
     groq`*[_type == "novels" && slug.current == $slug]`,
     { slug }
   );
+
+  if (!novel.length > 0) {
+    return { novel: null };
+  }
+
   return { novel };
 };
 
 export const meta = ({ data }) => {
-  const { novel } = data;
+  let novel;
+
+  if (data.novel) {
+    novel = data.novel;
+
+    return {
+      title: `${novel[0]?.name}`,
+    };
+  }
+
   return {
-    title: `${novel[0]?.name}`,
+    title: "Novel - N/A",
   };
 };
 
 export const Novel = () => {
   const data = useLoaderData();
+
+  if (!data.novel) {
+    throw new Error("Novel Not Found");
+  }
+
   const novel = data?.novel[0];
 
   return (

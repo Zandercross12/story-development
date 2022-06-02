@@ -25,15 +25,27 @@ export const loader = async (context) => {
     groq`*[_type == "characters" && slug.current == $slug]`,
     { slug }
   );
+
+  if (!character.length > 0) {
+    return { character: null };
+  }
+
   return {
     character,
   };
 };
 
 export const meta = ({ data }) => {
-  const { character } = data;
+  let character;
+  if (data.character) {
+    character = data?.character;
+    return {
+      title: `Character - ${character[0].name || "N/A"}`,
+    };
+  }
+
   return {
-    title: `Character - ${character[0].name || "N/A"}`,
+    title: "Character - N/A",
   };
 };
 
@@ -41,6 +53,10 @@ const builder = imageUrlBuilder(client);
 
 export const Character = () => {
   const data = useLoaderData();
+
+  if (!data.character) {
+    throw new Error("Character Not Found");
+  }
 
   const character = data.character[0];
 

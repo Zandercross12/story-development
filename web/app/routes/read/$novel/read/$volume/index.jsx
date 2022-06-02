@@ -11,9 +11,15 @@ import imageUrlBuilder from "@sanity/image-url";
 export const loader = async ({ params }) => {
   const slug = params.volume;
   const volumes = await client.fetch(
-    groq`*[_type == "volumes" && slug.current == $slug][0]`,
+    groq`*[_type == "volumes" && slug.current == $slug]`,
     { slug }
   );
+
+  console.log(volumes);
+
+  if (!volumes.length > 0) {
+    return { volumes: null };
+  }
 
   return {
     volumes,
@@ -21,16 +27,29 @@ export const loader = async ({ params }) => {
 };
 
 export const meta = ({ data }) => {
-  const volumes = data?.volumes;
+  let volumes;
+
+  if (data.volumes) {
+    volumes = data.volumes;
+
+    return {
+      title: `Read ${volumes[0]?.name}`,
+    };
+  }
+
   return {
-    title: `Read ${volumes?.name}`,
+    title: "Volume - N/A",
   };
 };
 
 export const Volume = () => {
   const data = useLoaderData();
 
-  const volumes = data?.volumes;
+  if (!data.volumes) {
+    throw new Error("Volume Not Found");
+  }
+
+  const volumes = data?.volumes[0];
 
   return (
     <section id="volume">
@@ -42,7 +61,7 @@ export const Volume = () => {
         <br />
         <h3>Part List</h3>
         <br />
-        {volumes?.content.map((content) => {
+        {volumes?.content?.map((content) => {
           return (
             <div className="content" key={content._key}>
               <h4>

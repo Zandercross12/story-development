@@ -32,14 +32,27 @@ export const loader = async (context) => {
 };
 
 export const meta = ({ data }) => {
-  const { location } = data;
+  let location;
+
+  if (data.location.length > 0) {
+    location = data.location[0];
+
+    return {
+      title: `Location - ${location.name || "N/A"}`,
+    };
+  }
+
   return {
-    title: `Location - ${location[0].name || "N/A"}`,
+    title: "Location Not Found",
   };
 };
 
 export const Location = () => {
   const data = useLoaderData();
+
+  if (!data.location || !data.location.length > 0) {
+    throw new Error("Location Not Found");
+  }
 
   const location = data.location[0];
 

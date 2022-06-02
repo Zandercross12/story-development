@@ -68,12 +68,12 @@ export const Read = () => {
         <h3>Volume List</h3>
         <br />
         <ul>
-          {volumes?.map((volume) => {
+          {volumes?.map((volume, index) => {
             const creationDate = new Date(volume._createdAt);
             const date = creationDate.toLocaleDateString();
 
             return (
-              <li>
+              <li key={index + "volume"}>
                 -{" "}
                 <button
                   id={volume.slug.current}
@@ -84,9 +84,9 @@ export const Read = () => {
                   {volume.published ? "Finished" : "Unfinished"}
                 </button>
                 <ul className={`hidden ${volume.slug.current}`}>
-                  {volume?.content.map((contentItem) => {
+                  {volume?.content.map((contentItem, index) => {
                     return (
-                      <li className="indent_list">
+                      <li key={index + "content"} className="indent_list">
                         -{" "}
                         <Link
                           className="part_link"

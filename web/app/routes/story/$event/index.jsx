@@ -29,7 +29,7 @@ export const meta = ({ data }) => {
 
 export const Event = () => {
   const data = useLoaderData();
-
+  // TODO: Continue removing errors for pages
   const { events } = data;
 
   return (

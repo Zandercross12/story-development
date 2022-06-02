@@ -36,8 +36,16 @@ export const loader = async (context) => {
 export const relations = () => {
   const data = useLoaderData();
 
+  if (!data.character.length > 0) {
+    throw new Error("Character Not Found");
+  }
+
   const character = data.character[0];
   const relationsReference = data.relationsRef;
+
+  if (!character.relations || !character.relations.length > 0) {
+    throw new Error("No Relations Found");
+  }
 
   let i = 0;
   return (

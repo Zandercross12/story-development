@@ -25,6 +25,10 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!character.length > 0) {
+    return { character: null };
+  }
+
   return {
     character,
   };
@@ -32,6 +36,10 @@ export const loader = async (context) => {
 
 export const Backstory = () => {
   const data = useLoaderData();
+
+  if (!data.character) {
+    throw new Error("Character Not Found");
+  }
 
   const character = data.character[0];
 
@@ -42,9 +50,9 @@ export const Backstory = () => {
         <div className="container_sidebar">
           <h1>Backstory</h1>
           <p>
-            {character?.backstory.map((backstoryText) => {
+            {character?.backstory.map((backstoryText, index) => {
               return (
-                <span key={backstoryText?.children[0].key}>
+                <span key={index + "backstory"}>
                   {backstoryText?.children[0].text} <br />
                 </span>
               );

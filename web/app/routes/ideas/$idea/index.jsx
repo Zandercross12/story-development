@@ -45,9 +45,7 @@ export const Idea = () => {
             {idea?.approved ? "Approved" : "Unapproved"}
           </div>
         </h1>
-        <p>
-          <TextComponent data={idea} />
-        </p>
+        <TextComponent data={idea} />
       </div>
     </section>
   );

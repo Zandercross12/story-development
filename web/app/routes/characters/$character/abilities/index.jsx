@@ -24,8 +24,14 @@ export const loader = async (context) => {
     groq`*[_type == "characters" && slug.current == $slug]`,
     { slug }
   );
-
   const reference = await client.fetch(groq`*[_type == "magicAbilities"]`);
+
+  if (!character.length > 0) {
+    return { character: null };
+  } else if (!reference.length > 0) {
+    return { reference: null };
+  }
+
   return {
     character,
     reference,
@@ -35,11 +41,19 @@ export const loader = async (context) => {
 export const Abilities = () => {
   const data = useLoaderData();
 
+  if (!data.character) {
+    throw new Error("Character Not Found");
+  } else if (!data.reference) {
+    throw new Error("Reference Not Found");
+  }
+
   const character = data.character[0];
 
   const magicAbilities = data.reference;
 
-  let i = 0;
+  if (!character.abilities || !character.abilities.length > 0) {
+    throw new Error("Character Abilities Not Found");
+  }
 
   return (
     <>
@@ -48,9 +62,7 @@ export const Abilities = () => {
         <div className="container_sidebar">
           <h1>Abilities</h1>
           <ul>
-            {character?.abilities.map((ability) => {
-              i++;
-
+            {character?.abilities?.map((ability, index) => {
               const abilityRefId = ability?._ref;
 
               let abilityRef;
@@ -62,7 +74,7 @@ export const Abilities = () => {
               }
 
               return (
-                <li key={i}>
+                <li key={index + "ability"}>
                   <h2>{abilityRef?.name}</h2>
                   <br />
                   <p>{abilityRef?.description}</p>
@@ -70,9 +82,9 @@ export const Abilities = () => {
                   <h3>Action</h3>
                   <br />
                   <p>
-                    {abilityRef?.action.map((actionText) => {
+                    {abilityRef?.action.map((actionText, index2) => {
                       return (
-                        <span key={actionText?.children[0].key}>
+                        <span key={index2 + "actionText"}>
                           {actionText.children[0].text} <br />
                         </span>
                       );

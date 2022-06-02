@@ -12,9 +12,9 @@ export const LocationPreview = ({ data }) => {
   return (
     <div>
       <ul className="location_list">
-        {data.map((location) => {
+        {data.map((location, index) => {
           return (
-            <li className="list_location">
+            <li key={index + "location"} className="list_location">
               <Link to={`/locations/${location.slug.current}`}>
                 <div className="image_container">
                   {!location.image ? (

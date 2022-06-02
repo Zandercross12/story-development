@@ -12,40 +12,61 @@ export const loader = async ({ params }) => {
   const partname = params.content;
 
   const volume = await client.fetch(
-    groq`*[_type == "volumes" && slug.current == $slug][0]`,
+    groq`*[_type == "volumes" && slug.current == $slug]`,
     { slug }
   );
+
+  if (!volume.length > 0) {
+    return { volume: null };
+  }
 
   return { volume, partname };
 };
 
 export const meta = ({ data }) => {
-  const volume = data?.volume;
+  let volume;
+
+  if (data.volume) {
+    volume = data?.volume;
+
+    return {
+      title: `${volume?.name}`,
+    };
+  }
+
   return {
-    title: `${volume?.name}`,
+    title: "Volume - N/A",
   };
 };
 
 export const Content = () => {
   const data = useLoaderData();
 
-  const volume = data?.volume;
+  if (!data.volume) {
+    throw new Error("Volume Not Found");
+  }
+
+  const volume = data?.volume[0];
   const partname = data?.partname;
 
   const content = volume?.content.find(
     (contentItem) => contentItem.partslug.current === partname
   );
 
+  if (!content) {
+    throw new Error("Chapter/Part Not Found");
+  }
+
   return (
     <section id="content">
       <div className="container">
         <h1>{content?.partname}</h1>
-        {content?.part.map((partItem) => {
+        {content?.part.map((partItem, index) => {
           const path = partItem.children;
 
           return (
-            <>
-              {path.map((textItems, index) => {
+            <div key={index + "partItem"}>
+              {path.map((textItems, index2) => {
                 const marks = textItems.marks;
 
                 let text = textItems.text;
@@ -66,11 +87,11 @@ export const Content = () => {
                   text = <em>{text}</em>;
                 }
 
-                return <span key={`${partItem._key} + ${index}`}>{text}</span>;
+                return <span key={index + "textItems" + index2}>{text}</span>;
               })}
               <br />
               <br />
-            </>
+            </div>
           );
         })}
         <Pagination volume={volume} partname={partname} />
