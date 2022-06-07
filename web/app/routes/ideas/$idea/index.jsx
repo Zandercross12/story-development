@@ -25,13 +25,36 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!idea || !idea.length > 0) {
+    return { idea: null };
+  }
+
   return {
     idea,
   };
 };
 
+export const meta = () => {
+  let idea;
+
+  if (idea) {
+    idea = data.idea;
+    return {
+      title: `Idea - ${idea[0]?.name || "ERROR"}`,
+    };
+  }
+
+  return {
+    title: "Idea not found",
+  };
+};
 export const Idea = () => {
   const data = useLoaderData();
+
+  if (!data.idea) {
+    throw new Error("Idea not found");
+  }
+
   const idea = data.idea[0];
 
   const approved = idea?.approved ? "approved" : "unapproved";

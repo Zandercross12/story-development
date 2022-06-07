@@ -34,20 +34,37 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!magicConcept || !magicConcept.length > 0) {
+    return { magicConcept: null };
+  }
+
   return {
     magicConcept,
   };
 };
 
 export const meta = ({ data }) => {
-  const { magicConcept } = data;
+  let magicConcept;
+
+  if (data.magicConcept) {
+    magicConcept = data.magicConcept;
+
+    return {
+      title: `Magic Concept - ${magicConcept[0]?.name || "ERROR"}`,
+    };
+  }
+
   return {
-    title: `Magic Concept - ${magicConcept[0]?.name || "ERROR"}`,
+    title: "Magic Concept not found",
   };
 };
 
 export const Concept = () => {
   const data = useLoaderData();
+
+  if (!data.magicConcept) {
+    throw new Error("Magic Concept not found");
+  }
 
   const concept = data.magicConcept[0];
 

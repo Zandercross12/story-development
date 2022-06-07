@@ -25,18 +25,35 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!worldBuilding || !worldBuilding.length > 0) {
+    return {
+      worldBuilding: null,
+    };
+  }
+
   return { worldBuilding };
 };
 
 export const meta = ({ data }) => {
-  const { worldBuilding } = data;
+  let worldBuilding;
+
+  if (worldBuilding) {
+    worldBuilding = data.worldBuilding;
+    return {
+      title: `World Building - ${worldBuilding[0]?.name || "ERROR"}`,
+    };
+  }
   return {
-    title: `World Building - ${worldBuilding[0]?.name || "ERROR"}`,
+    title: "World Building not found",
   };
 };
 
 export const Topic = () => {
   const data = useLoaderData();
+
+  if (!data.worldBuilding) {
+    throw new Error("World Building not found");
+  }
 
   const topic = data.worldBuilding[0];
 

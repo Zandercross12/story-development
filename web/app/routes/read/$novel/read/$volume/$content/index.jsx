@@ -27,7 +27,7 @@ export const meta = ({ data }) => {
   let volume;
 
   if (data.volume) {
-    volume = data?.volume;
+    volume = data?.volume[0];
 
     return {
       title: `${volume?.name}`,

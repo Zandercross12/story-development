@@ -27,20 +27,36 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!magicAbility || !magicAbility.length > 0) {
+    return { magicAbility: null };
+  }
+
   return {
     magicAbility,
   };
 };
 
 export const meta = ({ data }) => {
-  const { magicAbility } = data;
+  let magicAbility;
+
+  if (magicAbility) {
+    magicAbility = data.magicAbility;
+    return {
+      title: `Magic Ability - ${magicAbility[0]?.name || "ERROR"}`,
+    };
+  }
+
   return {
-    title: `Magic Ability - ${magicAbility[0]?.name || "ERROR"}`,
+    title: "Magic Ability not found",
   };
 };
 
 export const Ability = () => {
   const data = useLoaderData();
+
+  if (!data.magicAbility) {
+    throw new Error("Magic Ability not found");
+  }
 
   const ability = data.magicAbility[0];
 

@@ -15,22 +15,41 @@ export const loader = async (context) => {
     { slug }
   );
 
+  if (!events || !events.length > 0) {
+    return {
+      events: null,
+    };
+  }
+
   return {
     events,
   };
 };
 
 export const meta = ({ data }) => {
-  const { events } = data;
+  let events;
+
+  if (data.events) {
+    events = data.events[0];
+
+    return {
+      title: events.name || "Error",
+    };
+  }
+
   return {
-    title: events[0].name || "Error",
+    title: "Events not found",
   };
 };
 
 export const Event = () => {
   const data = useLoaderData();
-  // TODO: Continue removing errors for pages
-  const { events } = data;
+
+  if (!data.events) {
+    throw new Error("Events not found");
+  }
+
+  const events = data.events;
 
   return (
     <>
