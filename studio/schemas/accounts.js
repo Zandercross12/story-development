@@ -23,7 +23,7 @@ export default {
       description: "Copy of first + last name.",
       type: "slug",
       options: {
-        source: "first_name" + "last_name",
+        source: (accounts) => `${accounts.first_name}${accounts.last_name}`,
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
