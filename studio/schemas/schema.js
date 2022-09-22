@@ -16,6 +16,7 @@ import timeline from "./timeline";
 import worldBuilding from "./worldBuilding";
 import novels from "./novels";
 import volumes from "./volumes";
+import accounts from "./accounts";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -35,5 +36,6 @@ export default createSchema({
     worldBuilding,
     novels,
     volumes,
+    accounts,
   ]),
 });
