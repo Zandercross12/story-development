@@ -49,35 +49,37 @@ export default function App() {
 
 export function CatchBoundary() {
   const caught = useCatch();
-  <html lang="en">
-    <head>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <script
-        src="https://kit.fontawesome.com/e4319753b5.js"
-        crossOrigin="anonymous"
-      ></script>
-      <Meta />
-      <Links />
-      <Scripts />
-    </head>
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <script
+          src="https://kit.fontawesome.com/e4319753b5.js"
+          crossOrigin="anonymous"
+        ></script>
+        <Meta />
+        <Links />
+        <Scripts />
+      </head>
 
-    <Navbar />
+      <Navbar />
 
-    <body>
-      <section>
-        <div className="container">
-          <h1>{caught.status}</h1>
-          <p>
-            Looks like we have run into an error! Check the console for more
-            information.
-          </p>
-          <br />
-          <p>{caught.statusText}</p>
-        </div>
-      </section>
-    </body>
-  </html>;
+      <body>
+        <section>
+          <div className="container">
+            <h1>{caught.status}</h1>
+            <p>
+              Looks like we have run into an error! Check the console for more
+              information.
+            </p>
+            <br />
+            <p>{caught.statusText}</p>
+          </div>
+        </section>
+      </body>
+    </html>
+  );
 }
 
 export function ErrorBoundary({ error }) {
